@@ -2,13 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #333;
-    color: #fff;
+    padding: 1rem 2rem; /* Adjust padding as needed */
+    height: 80px;  /* Set a larger height */
+    background-color: #fff;  /* Assuming a white background for contrast */
+    border-bottom: 1px solid lightgray;  /* Light gray bottom border */
 }
 
 .navbar__logo {
-    font-size: 1.5rem;
+    font-size: 1.5rem;  /* Adjust font size as needed */
+    margin-left: 1rem;  /* Space it a bit from the left edge */
 }
 
 .navbar__hamburger {
@@ -19,16 +21,18 @@
     justify-content: center;
     border: 2px solid #fff;
     cursor: pointer;
+    margin-right: 1rem;  /* Space it a bit from the right edge */
 }
 
 .navbar__hamburger--lines span {
     display: block;
     width: 1.5rem;
     height: 2px;
-    background-color: #fff;
+    background-color: #333;  /* Assuming a dark color for contrast */
     margin: 2px 0;
 }
 
 .navbar__hamburger--cross {
     font-size: 1.5rem;
+    color: #333;  /* Assuming a dark color for contrast */
 }
