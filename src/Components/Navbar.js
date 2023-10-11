@@ -1,4 +1,3 @@
-// Navbar.js
 import './Navbar.css';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -9,7 +8,6 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
-                {/* Your logo goes here */}
                 TRV Car Concierge
             </div>
             <motion.div 
@@ -20,15 +18,11 @@ const Navbar = () => {
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(!isOpen)}
             >
-                {!isOpen ? (
-                    <div className="navbar__hamburger--lines">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                ) : (
-                    <div className="navbar__hamburger--cross">X</div>
-                )}
+                <div className={`navbar__hamburger--lines ${isOpen ? 'open' : ''}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </motion.div>
             {isOpen && (
                 <div className="navbar__menu">
