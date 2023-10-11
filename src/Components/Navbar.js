@@ -34,3 +34,9 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+<div className="app">
+    <Navbar />
+    <img src="path_to_your_image.jpg" alt="Description of the image" className="header-image" />
+    {/* rest of your components or content */}
+</div>
