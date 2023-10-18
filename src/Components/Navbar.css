@@ -9,9 +9,25 @@
     border-bottom: 1px solid lightgray;
 }
 
+.navbar__logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .navbar__logo {
-    font-size: 1.5rem;
-    margin-left: 1rem;
+    width: 14rem; /* Increased size for TRV Logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 0rem; /* Space between the two logos */
+}
+
+.navbar__heading {
+    font-size: 1.5rem; /* Adjust the size of the text */
+    color: #404040; /* Adjust the color of the text */
+    letter-spacing: 0.04rem; /* Adjust the spacing between letters */
+    margin-top: 0rem; /* Space between the logo and the heading */
+    font-weight: 700; /* Medium bold weight */
+    font-family: 'Roboto', sans-serif;
 }
 
 .icon-burger {
