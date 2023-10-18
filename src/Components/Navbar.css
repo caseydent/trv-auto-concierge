@@ -114,3 +114,10 @@
     opacity: 1; /* Fade in to full opacity */
 }
 
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+

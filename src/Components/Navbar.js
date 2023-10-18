@@ -1,5 +1,5 @@
 import './Navbar.css';
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 
 const Navbar = () => {
 
@@ -22,14 +22,14 @@ const Navbar = () => {
         }
     }
 
-    const handleOutsideClick = useCallback((event) => { // Wrapped with useCallback
+    function handleOutsideClick(event) {
         const hamburgerMenu = document.querySelector('.icon-burger');
         const menuContainer = document.querySelector('.menu-container');
 
         if (!hamburgerMenu.contains(event.target) && !menuContainer.contains(event.target) && hamburgerMenu.classList.contains('active')) {
             toggleMenu();
         }
-    }, []); // Empty dependency array for useCallback
+    }
 
     useEffect(() => {
         document.addEventListener('click', handleOutsideClick);
@@ -38,27 +38,30 @@ const Navbar = () => {
         return () => {
             document.removeEventListener('click', handleOutsideClick);
         };
-    }, [handleOutsideClick]); // Added handleOutsideClick to the dependency array
+    }, []);
 
     return (
-        <nav className="navbar">
-            <div className="navbar__logo-container">
-                <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1697624567/p8efqixdqmiqydahbl4x.png" alt="TRV Logo" className="navbar__logo" />
-                <h1 className="navbar__heading">AUTO CONCIERGE</h1>
-            </div>
-            <div className="icon-burger" onClick={toggleMenu}>
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-            </div>
-            <div className="menu-container">
-                <div className="menu-item">Home</div>
-                <div className="menu-item">Process</div>
-                <div className="menu-item">Getting Started</div>
-                <div className="menu-item">About Us</div>
-                <div className="menu-item">Contact</div>
-            </div>
-        </nav>
+        <div>
+            <nav className="navbar">
+                <div className="navbar__logo-container">
+                    <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1697624567/p8efqixdqmiqydahbl4x.png" alt="TRV Logo" className="navbar__logo" />
+                    <h1 className="navbar__heading">AUTO CONCIERGE</h1>
+                </div>
+                <div className="icon-burger" onClick={toggleMenu}>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                </div>
+                <div className="menu-container">
+                    <div className="menu-item">Home</div>
+                    <div className="menu-item">Process</div>
+                    <div className="menu-item">Getting Started</div>
+                    <div className="menu-item">About Us</div>
+                    <div className="menu-item">Contact</div>
+                </div>
+            </nav>
+            <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1697653393/ghscei35o2lourbtubg6.jpg" alt="Landrover" className="full-width-image" />
+        </div>
     );
 }
 
