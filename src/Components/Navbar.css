@@ -1,14 +1,71 @@
 .navbar {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem; /* Adjust padding as needed */
-    height: 10rem;  /* Set a larger height */
-    background-color: #fff;  /* Assuming a white background for contrast */
-    border-bottom: 1px solid lightgray;  /* Light gray bottom border */
+    padding: 1rem 2rem;
+    height: 10rem;
+    background-color: #fff;
+    border-bottom: 1px solid lightgray;
 }
 
 .navbar__logo {
-    font-size: 1.5rem;  /* Adjust font size as needed */
-    margin-left: 1rem;  /* Space it a bit from the left edge */
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.icon-burger {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 15%;
+    top: 50%; /* Adjusted to center vertically within the navbar */
+    transform: translateY(-50%);
+    background-color: #303030;
+    border: 1px solid #fff; /* Added a full border */
+    padding: 0.25rem; /* Adjusting padding for even spacing */
+    box-sizing: border-box;
+    width: 2.5rem; /* Adjusted width */
+    height: 2.5rem; /* Adjusted height */
+    justify-content: center; /* Centering the lines vertically */
+    align-items: center; /* Centering the lines horizontally */
+    transition: background-color 0.5s; /* Keep the transition duration the same */
+}
+
+.icon-burger .line {
+    width: 1.8rem;
+    height: 0.313rem;
+    background-color: #fff;
+    margin: 0.188rem 0;
+    transition: background-color 0.5s, transform 0.5s; /* Keep the transition durations the same */
+}
+
+.icon-burger.active {
+    background-color: #fff;
+}
+
+.icon-burger.active .line {
+    background-color: #303030;
+}
+
+.icon-burger.active .line:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.156rem;
+    margin-left: -0.938rem;
+}
+
+.icon-burger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.icon-burger.active .line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.156rem;
+    margin-left: -0.938rem;
 }
