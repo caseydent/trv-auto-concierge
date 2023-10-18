@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    height: 10rem;
+    height: 7rem;
     background-color: #fff;
     border-bottom: 1px solid lightgray;
 }
@@ -23,7 +23,7 @@
 
 .navbar__heading {
     font-size: 1.5rem; /* Adjust the size of the text */
-    color: #404040; /* Adjust the color of the text */
+    color: #303030; /* Adjust the color of the text */
     letter-spacing: 0.04rem; /* Adjust the spacing between letters */
     margin-top: 0rem; /* Space between the logo and the heading */
     font-weight: 700; /* Medium bold weight */
@@ -85,3 +85,32 @@
     margin-top: -0.156rem;
     margin-left: -0.938rem;
 }
+
+.menu-container {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the navbar */
+    top: 100%; /* Start from the bottom of the navbar */
+    width: 100%; /* Take full width of the viewport */
+    background-color: #303030; /* Same as the hamburger icon */
+    text-align: center; /* Center each menu item horizontally */
+    opacity: 0; /* Start with 0 opacity for fade-in effect */
+    transition: opacity 0.2s ease-in-out; /* Fade-in effect */
+    width: 80%; /* Adjust to desired width */
+    margin: 0 auto; /* Center it horizontally */
+    left: 0;
+    right: 0;
+}
+
+.menu-item {
+    padding: .75rem 0; /* Even vertical spacing */
+    color: #fff; /* White text color for contrast */
+    font-size: 1.2rem; /* Adjust font size as needed */
+    cursor: pointer; /* Indicate interactivity */
+}
+
+/* Active state for the menu when hamburger icon is clicked */
+.icon-burger.active + .menu-container {
+    display: block; /* Show the menu */
+    opacity: 1; /* Fade in to full opacity */
+}
+
