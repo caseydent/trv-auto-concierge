@@ -6,6 +6,8 @@ function App() {
     <div className="App">
       <Navbar />
       {/* Rest of your content goes here */}
+      <Home /> {/* Use the Home component here */}
+      {/* Rest of your content goes here */}
     </div>
   );
 }
