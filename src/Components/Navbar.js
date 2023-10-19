@@ -1,5 +1,5 @@
 import './Navbar.css';
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
 const Navbar = () => {
 
@@ -13,31 +13,32 @@ const Navbar = () => {
             menuContainer.style.display = 'block';
             setTimeout(() => {
                 menuContainer.style.opacity = '1';
-            }, 10);
+            }, 10); // This slight delay ensures the fade-in transition works as expected
         } else {
             menuContainer.style.opacity = '0';
             setTimeout(() => {
                 menuContainer.style.display = 'none';
-            }, 500);
+            }, 500); // This delay matches the CSS transition duration
         }
     }
 
-    function handleOutsideClick(event) {
+    const handleOutsideClick = useCallback((event) => { // Wrapped with useCallback
         const hamburgerMenu = document.querySelector('.icon-burger');
         const menuContainer = document.querySelector('.menu-container');
 
         if (!hamburgerMenu.contains(event.target) && !menuContainer.contains(event.target) && hamburgerMenu.classList.contains('active')) {
             toggleMenu();
         }
-    }
+    }, []); // Empty dependency array for useCallback
 
     useEffect(() => {
         document.addEventListener('click', handleOutsideClick);
 
+        // Cleanup function to remove the event listener
         return () => {
             document.removeEventListener('click', handleOutsideClick);
         };
-    }, []);
+    }, [handleOutsideClick]); // Added handleOutsideClick to the dependency array
 
     return (
         <nav className="navbar">
