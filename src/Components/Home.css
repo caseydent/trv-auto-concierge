@@ -1,6 +1,27 @@
 .full-width-image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-section {
+  height: 100vh; /* Adjust this value as needed */
+  /* ... other styles ... */
+}
+
+.home-text {
+  text-align: center; /* Center the text */
+  margin-top: 8rem; /* Add some spacing between the image and the text */
+}
+
+.home-heading {
+  font-size: 1.75rem; /* Adjust as needed */
+  letter-spacing: 2px;
+  color: #777; /* Adjust as needed */
+}
+
+.home-subheading {
+  font-size: 1.5rem; /* Adjust as needed */
+  color: #777; /* Adjust as needed */
+  margin-top: 1rem; /* Add some spacing between the heading and subheading */
+}
