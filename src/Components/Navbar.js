@@ -53,8 +53,8 @@ const Navbar = () => {
             </div>
             <div className="menu-container">
                 <div className="menu-item">Home</div>
-                <div className="menu-item">Process</div>
-                <div className="menu-item">Getting Started</div>
+                <div className="menu-item">How It Works</div>
+                <div className="menu-item">Services</div>
                 <div className="menu-item">About Us</div>
                 <div className="menu-item">Contact</div>
             </div>
