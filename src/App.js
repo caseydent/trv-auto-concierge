@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Home from './Pages/Home/Home';
@@ -5,28 +6,20 @@ import HowItWorks from './Pages/Howitworks/Howitworks';
 import Services from './Pages/Services/Services';
 import AboutUs from './Pages/Aboutus/Aboutus';
 import Contact from './Pages/Contact/Contact';
-
-// Import necessary components from react-router-dom
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        {/* Routing logic starts here */}
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/how-it-works" component={HowItWorks} />
-          <Route path="/services" component={Services} />
-          <Route path="/about-us" component={AboutUs} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
-        {/* Routing logic ends here */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/howitworks" element={<HowItWorks />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
     </Router>
   );
