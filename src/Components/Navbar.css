@@ -9,25 +9,45 @@
     border-bottom: 1px solid lightgray;
 }
 
-.navbar__logo-container {
+/* Flex container for the logo and headings */
+.navbar__content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .navbar__logo {
-    width: 14rem; /* Increased size for TRV Logo */
+    width: 4rem; /* Increased size for TRV Logo */
     height: auto; /* Maintain aspect ratio */
-    margin-bottom: 0rem; /* Space between the two logos */
+    margin-right: 0.5rem; /* Space between the logo and the headings */
+}
+
+/* Flex container for the two headings */
+.navbar__headings {
+    display: flex;
+    flex-direction: column; /* Stack the headings vertically */
+}
+
+/* For the top heading */
+.navbar__heading:first-child {
+    margin-bottom: 0;
+    align-self: flex-start;
+}
+
+/* For the bottom heading (it should already be at the top left) */
+.navbar__heading:last-child {
+    margin-bottom: 0;
+    align-self: flex-start;
 }
 
 .navbar__heading {
     font-size: 1.5rem; /* Adjust the size of the text */
-    color: #777; /* Adjust the color of the text */
+    color: black; /* Adjust the color of the text */
     letter-spacing: 0.04rem; /* Adjust the spacing between letters */
     margin-top: 0rem; /* Space between the logo and the heading */
-    font-weight: 700; /* Medium bold weight */
-    
+    font-weight: 500; /* Medium bold weight */
+    font-family: 'Montserrat';
 }
 
 .icon-burger {
@@ -37,7 +57,7 @@
     right: 15%;
     top: 50%; /* Adjusted to center vertically within the navbar */
     transform: translateY(-50%);
-    background-color: #777;
+    background-color: black;
     border: 1px solid #fff; /* Added a full border */
     padding: 0.25rem; /* Adjusting padding for even spacing */
     box-sizing: border-box;
