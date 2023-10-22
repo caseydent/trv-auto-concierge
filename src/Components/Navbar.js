@@ -1,5 +1,6 @@
 import './Navbar.css';
 import React, { useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component
 
 const Navbar = () => {
 
@@ -22,14 +23,14 @@ const Navbar = () => {
         }
     }
 
-    const handleOutsideClick = useCallback((event) => { // Wrapped with useCallback
+    const handleOutsideClick = useCallback((event) => {
         const hamburgerMenu = document.querySelector('.icon-burger');
         const menuContainer = document.querySelector('.menu-container');
 
         if (!hamburgerMenu.contains(event.target) && !menuContainer.contains(event.target) && hamburgerMenu.classList.contains('active')) {
             toggleMenu();
         }
-    }, []); // Empty dependency array for useCallback
+    }, []);
 
     useEffect(() => {
         document.addEventListener('click', handleOutsideClick);
@@ -38,7 +39,7 @@ const Navbar = () => {
         return () => {
             document.removeEventListener('click', handleOutsideClick);
         };
-    }, [handleOutsideClick]); // Added handleOutsideClick to the dependency array
+    }, [handleOutsideClick]);
 
     return (
         <nav className="navbar">
@@ -55,11 +56,11 @@ const Navbar = () => {
                 <div className="line"></div>
             </div>
             <div className="menu-container">
-                <div className="menu-item">Home</div>
-                <div className="menu-item">How It Works</div>
-                <div className="menu-item">Services</div>
-                <div className="menu-item">About Us</div>
-                <div className="menu-item">Contact</div>
+                <Link to="/" className="menu-item" onClick={toggleMenu}>Home</Link>
+                <Link to="/how-it-works" className="menu-item" onClick={toggleMenu}>How It Works</Link>
+                <Link to="/services" className="menu-item" onClick={toggleMenu}>Services</Link>
+                <Link to="/about-us" className="menu-item" onClick={toggleMenu}>About Us</Link>
+                <Link to="/contact" className="menu-item" onClick={toggleMenu}>Contact</Link>
             </div>
         </nav>
     );
