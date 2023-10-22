@@ -9,7 +9,7 @@ import Contact from './Pages/Contact/Contact';
 // Import necessary components from react-router-dom
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from 'react-router-dom';
 
@@ -19,13 +19,13 @@ function App() {
       <div className="App">
         <Navbar />
         {/* Routing logic starts here */}
-        <Switch>
+        <Routes>
           <Route path="/" exact component={Home} />
           <Route path="/how-it-works" component={HowItWorks} />
           <Route path="/services" component={Services} />
           <Route path="/about-us" component={AboutUs} />
           <Route path="/contact" component={Contact} />
-        </Switch>
+        </Routes>
         {/* Routing logic ends here */}
       </div>
     </Router>
