@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import Home from './Pages/Home/Home';
-import HowItWorks from './Pages/HowItWorks/HowItWorks';
+import HowItWorks from './Pages/Howitworks/Howitworks';
 import Services from './Pages/Services/Services';
 import AboutUs from './Pages/Aboutus/Aboutus';
 import Contact from './Pages/Contact/Contact';
