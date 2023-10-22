@@ -3,7 +3,7 @@ import Navbar from './Components/Navbar';
 import Home from './Pages/Home/Home';
 import HowItWorks from './Pages/HowItWorks/HowItWorks';
 import Services from './Pages/Services/Services';
-import AboutUs from './Pages/AboutUs/AboutUs';
+import AboutUs from './Pages/Aboutus/Aboutus';
 import Contact from './Pages/Contact/Contact';
 
 // Import necessary components from react-router-dom
