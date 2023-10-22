@@ -42,9 +42,12 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="navbar__logo-container">
-                <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1697624567/p8efqixdqmiqydahbl4x.png" alt="TRV Logo" className="navbar__logo" />
-                <h1 className="navbar__heading">VEHICLE CONCIERGE</h1>
+            <div className="navbar__content">
+                <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1697825004/TRV_Logo_icon_mqwg0a.png" alt="TRV Logo" className="navbar__logo" />
+                <div className="navbar__headings">
+                    <h1 className="navbar__heading">TRV-VEHICLE</h1>
+                    <h1 className="navbar__heading">CONCIERGE</h1>
+                </div>
             </div>
             <div className="icon-burger" onClick={toggleMenu}>
                 <div className="line"></div>
