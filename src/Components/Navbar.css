@@ -122,7 +122,11 @@
 }
 
 .menu-item {
-    padding: .75rem 0; /* Even vertical spacing */
+    display: block;
+    text-decoration: none;
+    margin: 1rem 0;  /* Adjust as needed to space them out vertically */
+    color: inherit;  /* Make sure the color is consistent with the parent */
+    padding: .3rem 0; /* Even vertical spacing */
     color: #fff; /* White text color for contrast */
     font-size: 1.2rem; /* Adjust font size as needed */
     cursor: pointer; /* Indicate interactivity */
