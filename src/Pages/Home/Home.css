@@ -15,13 +15,12 @@
 }
 
 .home-heading {
-  font-size: 1.75rem; /* Adjust as needed */
-  letter-spacing: 2px;
+  font-size: 1.4rem; /* Adjust as needed */
   color: #777; /* Adjust as needed */
 }
 
 .home-subheading {
-  font-size: 1.5rem; /* Adjust as needed */
+  font-size: 1.2rem; /* Adjust as needed */
   color: #777; /* Adjust as needed */
   margin-top: 1rem; /* Add some spacing between the heading and subheading */
 }
