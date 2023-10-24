@@ -57,33 +57,31 @@
 }
 
 .customer-showcase {
-  padding: 2rem 0; /* Adjust as needed */
+  padding-top: 5.31rem;
   background-color: #fff; /* Or any desired background color */
 }
 
 .showcase-title {
   text-align: center;
   margin-bottom: 2rem; /* Adjust as needed */
+  color: #777
 }
 
 .showcase-item {
-  display: flex;
-  align-items: center;
+  display: column;
+  flex-direction: column;  /* Stack items vertically */
+  align-items: center; 
   margin-bottom: 2rem; /* Adjust for spacing between items */
 }
 
-.customer-image {
-  width: 100px; /* Adjust as needed */
-  height: 100px;
-  border-radius: 50%; /* Makes the image round */
-  margin-right: 1rem;
-}
-
 .customer-name {
-  font-weight: bold;
+  font-weight: normal;
+  color: #777
 }
 
 .customer-testimonial {
-  flex: 1; /* Allows the testimonial to take the remaining width */
+  font-style: italic;
+  color: #777;
+  padding: 0 2rem; /* Adjust the padding value as needed */
 }
 

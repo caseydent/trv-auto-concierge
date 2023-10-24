@@ -50,13 +50,15 @@ function Home() {
 
         <div className="showcase-item">
           <img
-            src="URL_OF_THE_CUSTOMER_IMAGE"
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698167117/Debbie_cauup3.png"
             alt="Customer Name"
-            className="customer-image"
+            className="full-width-image"
           />
-          <h3 className="customer-name">Customer Name</h3>
+          <h3 className="customer-name">Deanna Whalen - 2022 Ford Bronco</h3>
           <p className="customer-testimonial">
-            Short testimonial or description about the vehicle procured.
+            "We were so excited, we couldn't resist sending you the picture and
+            would be thrilled if you share it. We still have the sign hanging
+            up!"
           </p>
         </div>
 
