@@ -51,7 +51,7 @@ function Home() {
         <div className="showcase-item">
           <img
             src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698167117/Debbie_cauup3.png"
-            alt="Customer Name"
+            alt="Debbie Whalen"
             className="full-width-image"
           />
           <h3 className="customer-name">Deanna Whalen - 2022 Ford Bronco</h3>
@@ -61,7 +61,15 @@ function Home() {
             up!"
           </p>
         </div>
-
+        <div className="showcase-item">
+          <img
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
+            alt="Jimmy Cornelius"
+            className="full-width-image"
+          />
+          <h3 className="customer-name">Jimmy Cornelius - 2023 Bayliner Element M17 Boat</h3>
+          {/* Add customer-testimonial here <p> */}
+        </div>
         {/* Add more showcase items as needed */}
       </div>
     </div>

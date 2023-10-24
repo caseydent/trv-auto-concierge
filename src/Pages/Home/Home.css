@@ -71,12 +71,13 @@
   display: column;
   flex-direction: column;  /* Stack items vertically */
   align-items: center; 
-  margin-bottom: 2rem; /* Adjust for spacing between items */
+  margin-bottom: 4rem; /* Adjust for spacing between items */
 }
 
 .customer-name {
   font-weight: normal;
-  color: #777
+  color: #777;
+  padding: 0 2rem; /* Adjust the padding value as needed */
 }
 
 .customer-testimonial {
