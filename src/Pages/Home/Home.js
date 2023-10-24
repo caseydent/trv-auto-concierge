@@ -70,6 +70,38 @@ function Home() {
           <h3 className="customer-name">Jimmy Cornelius - 2023 Bayliner Element M17 Boat</h3>
           {/* Add customer-testimonial here <p> */}
         </div>
+        <div className="showcase-item">
+          <img
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
+            alt="Christine Knatz"
+            className="full-width-image"
+          />
+          <h3 className="customer-name">Christine Knatz - 2023 Yamaha Kodiak EPS 700 - Tactical Black</h3>
+          <p className="customer-testimonial">
+            "The 4 wheeler exceeded my expectations. From the handling to terrain it's truly an amazing machine.
+            I love how easy it is to start, maneuver due to power steering to the ease of going into reverse. 
+            I can now go into trails with steep incline and use my winch to remove trees in my way.
+            up!"
+          </p>
+        </div>
+        <div className="showcase-item">
+          <img
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
+            alt="Danny Carr"
+            className="full-width-image"
+          />
+          <h3 className="customer-name">Danny Carr - 2022 Ford EcoSport S</h3>
+          {/* Add customer-testimonial here <p> */}
+        </div>
+        <div className="showcase-item">
+          <img
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
+            alt="Jimmy Cornelius"
+            className="full-width-image"
+          />
+          <h3 className="customer-name">Jimmy Cornelius - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic</h3>
+          {/* Add customer-testimonial here <p> */}
+        </div>
         {/* Add more showcase items as needed */}
       </div>
     </div>
