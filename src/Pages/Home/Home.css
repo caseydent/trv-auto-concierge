@@ -38,7 +38,7 @@
   margin: 0 auto;  /* Center the container horizontally */
 }
 
-.info-title {
+.info-title{
   text-align: center;
   color: #A39E8E;
 }
@@ -49,4 +49,8 @@
   line-height: 1.6rem; /* Adjust this value as needed */
   padding-left: 1.125rem; /* Visually align with title */
   color: #777;
+}
+
+.info-content-additional {
+  margin-top: 3rem;  /* Adjust as needed */
 }

@@ -30,9 +30,19 @@ function Home() {
             At TRV Auto Concierge, we specialize in sourcing and delivering a
             wide range of vehicles tailored to your preferences. With over five
             years in the industry, we're your trusted partner in procuring cars,
-            recreational vehicles, boats, and motorcycles. 
+            recreational vehicles, boats, and motorcycles.
             {/*Additional information or text here...*/}
           </p>
+          {/* New Content Block */}
+          <div className="info-content-additional">
+            <h2 className="info-title">WHAT WE PROCURE</h2>
+            <p className="info-text">
+              Your Dream Ride, Delivered: Whether you’re in the market for a
+              sleek new car, a fun recreational vehicle, a sturdy boat, or a
+              swift motorcycle, we've got you covered. Our extensive experience
+              ensures you get the best deal on your desired vehicle.
+            </p>
+          </div>
         </div>
       </div>
     </div>
