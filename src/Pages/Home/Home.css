@@ -16,11 +16,37 @@
 
 .home-heading {
   font-size: 1.4rem; /* Adjust as needed */
+  line-height: 2rem; /* Adjust this value as needed */
   color: #777; /* Adjust as needed */
+  
 }
 
 .home-subheading {
   font-size: 1.2rem; /* Adjust as needed */
+  line-height: 1.6rem; /* Adjust this value as needed */
   color: #777; /* Adjust as needed */
   margin-top: 1rem; /* Add some spacing between the heading and subheading */
+}
+
+.info-section {
+  padding-top: 5.31rem;
+  background-color: #f7f7f7;
+}
+
+.info-content {
+  width: 60%;  /* Adjust this value to control the width of the column */
+  margin: 0 auto;  /* Center the container horizontally */
+}
+
+.info-title {
+  text-align: center;
+  color: #A39E8E;
+}
+
+.info-text {
+  text-align: left;  /* Set text to start from the left */
+  margin: 0 auto;  /* Center block elements */
+  line-height: 1.6rem; /* Adjust this value as needed */
+  padding-left: 1.125rem; /* Visually align with title */
+  color: #777;
 }
