@@ -30,6 +30,7 @@
 
 .info-section {
   padding-top: 5.31rem;
+  padding-bottom: 5.31rem;
   background-color: #f7f7f7;
 }
 
@@ -54,3 +55,35 @@
 .info-content-additional {
   margin-top: 4rem;  /* Adjust as needed */
 }
+
+.customer-showcase {
+  padding: 2rem 0; /* Adjust as needed */
+  background-color: #fff; /* Or any desired background color */
+}
+
+.showcase-title {
+  text-align: center;
+  margin-bottom: 2rem; /* Adjust as needed */
+}
+
+.showcase-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem; /* Adjust for spacing between items */
+}
+
+.customer-image {
+  width: 100px; /* Adjust as needed */
+  height: 100px;
+  border-radius: 50%; /* Makes the image round */
+  margin-right: 1rem;
+}
+
+.customer-name {
+  font-weight: bold;
+}
+
+.customer-testimonial {
+  flex: 1; /* Allows the testimonial to take the remaining width */
+}
+

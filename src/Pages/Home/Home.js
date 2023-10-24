@@ -45,6 +45,23 @@ function Home() {
           </div>
         </div>
       </div>
+      <div className="customer-showcase">
+        <h2 className="showcase-title">Our Happy Customers</h2>
+
+        <div className="showcase-item">
+          <img
+            src="URL_OF_THE_CUSTOMER_IMAGE"
+            alt="Customer Name"
+            className="customer-image"
+          />
+          <h3 className="customer-name">Customer Name</h3>
+          <p className="customer-testimonial">
+            Short testimonial or description about the vehicle procured.
+          </p>
+        </div>
+
+        {/* Add more showcase items as needed */}
+      </div>
     </div>
   );
 }
