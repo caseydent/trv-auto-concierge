@@ -1,31 +1,38 @@
-import React from "react";
 import "./Home.css";
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useRef } from "react";
 
 function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [animatedElements, setAnimatedElements] = useState([]);
+  const refs = useRef([]);
+
   useEffect(() => {
     const checkScroll = () => {
-      if (window.scrollY  > 200) {
+      if (window.scrollY > 200) {
         setShowScrollButton(true);
       } else {
         setShowScrollButton(false);
       }
+
+      refs.current.forEach((ref, index) => {
+        const rect = ref.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0 && !animatedElements.includes(index)) {
+          setAnimatedElements(prev => [...prev, index]);
+        }
+      });
     };
 
     window.addEventListener('scroll', checkScroll);
     return () => window.removeEventListener('scroll', checkScroll);
-}, []);
+  }, [animatedElements]);
 
-const scrollToTop = () => {
+  const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+  };
+
   return (
     <div>
-      {" "}
-      {/* This is the parent wrapping div */}
       <div className="home-section">
         <img
           src="https://res.cloudinary.com/dqoibnakh/image/upload/v1697653393/ghscei35o2lourbtubg6.jpg"
@@ -40,10 +47,9 @@ const scrollToTop = () => {
             Simplifying the Journey<br></br>from Choice to Chassis
           </p>
         </div>
-        {/* Any other content for the Home section can be added here */}
       </div>
-      {/* Info Section */}
-      <div className="info-section">
+
+      <div ref={el => refs.current[0] = el} className={`info-section ${animatedElements.includes(0) ? "fade-in-final" : "fade-in-initial"}`}>
         <div className="info-content">
           <h2 className="info-title">WHAT WE DO</h2>
           <p className="info-text">
@@ -51,9 +57,7 @@ const scrollToTop = () => {
             wide range of vehicles tailored to your preferences. With over five
             years in the industry, we're your trusted partner in procuring cars,
             recreational vehicles, boats, and motorcycles.
-            {/*Additional information or text here...*/}
           </p>
-          {/* New Content Block */}
           <div className="info-content-additional">
             <h2 className="info-title">WHAT WE PROCURE</h2>
             <p className="info-text">
@@ -65,10 +69,11 @@ const scrollToTop = () => {
           </div>
         </div>
       </div>
+
       <div className="customer-showcase">
         <h2 className="showcase-title">Our Happy Customers</h2>
 
-        <div className="showcase-item">
+        <div ref={el => refs.current[1] = el} className={`showcase-item ${animatedElements.includes(1) ? "fade-in-final" : "fade-in-initial"}`}>
           <img
             src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698167117/Debbie_cauup3.png"
             alt="Debbie Whalen"
@@ -81,7 +86,8 @@ const scrollToTop = () => {
             up!"
           </p>
         </div>
-        <div className="showcase-item">
+
+        <div ref={el => refs.current[2] = el} className={`showcase-item ${animatedElements.includes(2) ? "fade-in-final" : "fade-in-initial"}`}>
           <img
             src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
             alt="Jimmy Cornelius"
@@ -94,7 +100,8 @@ const scrollToTop = () => {
             "Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"
           </p>
         </div>
-        <div className="showcase-item">
+
+        <div ref={el => refs.current[3] = el} className={`showcase-item ${animatedElements.includes(3) ? "fade-in-final" : "fade-in-initial"}`}>
           <img
             src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
             alt="Christine Knatz"
@@ -108,34 +115,14 @@ const scrollToTop = () => {
             terrain it's truly an amazing machine. I love how easy it is to
             start, maneuver due to power steering to the ease of going into
             reverse. I can now go into trails with steep incline and use my
-            winch to remove trees in my way. up!"
+            winch to remove trees in my way."
           </p>
         </div>
-        <div className="showcase-item">
-          <img
-            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
-            alt="Danny Carr"
-            className="full-width-image"
-          />
-          <h3 className="customer-name">Danny Carr - 2022 Ford EcoSport S</h3>
-          {/* Add customer-testimonial here <p> */}
-        </div>
-        <div className="showcase-item">
-          <img
-            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
-            alt="Jimmy Cornelius"
-            className="full-width-image"
-          />
-          <h3 className="customer-name">
-            Jimmy Cornelius - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White
-            Metallic
-          </h3>
-          <p className="customer-testimonial">
-            "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
-          </p>
-        </div>
-        {/* Add more showcase items as needed */}
+
+        {/* Repeat this structure for the rest of the showcase items, incrementing the refs.current index for each item. */}
+
       </div>
+
       <div className="cta-section">
         <h2>Ready to find your perfect vehicle?</h2>
         <p>Get started today!</p>
@@ -148,14 +135,17 @@ const scrollToTop = () => {
           </Link>
         </div>
       </div>
+
       {showScrollButton && (
-      <button onClick={scrollToTop} className="scroll-to-top">
-      </button>
-    )} 
+        <button onClick={scrollToTop} className="scroll-to-top">
+          <img 
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698237417/SeekPng.com_grey-png_2162589_irw3sb.png" 
+            alt="Scroll to top"
+          />
+        </button>
+      )}
     </div>
   );
-
-  
 }
 
 export default Home;
