@@ -1,5 +1,7 @@
 import React from "react";
 import "./Home.css";
+import { Link } from 'react-router-dom';
+
 
 function Home() {
   return (
@@ -120,12 +122,12 @@ function Home() {
         <h2>Ready to find your perfect vehicle?</h2>
         <p>Get started today!</p>
         <div className="cta-links">
-          <a href="/services" className="cta-link">
+          <Link to="/services" className="cta-link">
             Services
-          </a>
-          <a href="/howitworks" className="cta-link">
+          </Link>
+          <Link to="/howitworks" className="cta-link">
             How It Works
-          </a>
+          </Link>
         </div>
       </div>
     </div>
