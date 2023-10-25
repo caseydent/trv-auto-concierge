@@ -66,7 +66,7 @@
 
 /* Styling for the anchor tags (links) in the "Quick Links" section. */
 .footer-links a {
-  color: #add8e6; /* Sets link color to a light blue. */
+  color: #40d4fc; /* Sets link color to a light blue. */
   font-weight: 500; /* Makes the font slightly bolder than normal. */
   padding: 0.3125rem 0; /* Provides vertical padding for better tap-ability. */
   display: block; /* Makes the links block-level for better tap-ability. */
