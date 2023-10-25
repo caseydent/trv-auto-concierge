@@ -1,0 +1,38 @@
+.footer {
+  background-color: #333;
+  color: white;
+  padding-top: 5.31rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem; /* Adjust horizontal padding as desired */
+}
+
+.footer-about h3,
+.footer-links h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-about p {
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem; /* Spacing between links */
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
