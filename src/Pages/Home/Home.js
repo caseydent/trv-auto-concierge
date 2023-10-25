@@ -1,9 +1,27 @@
 import React from "react";
 import "./Home.css";
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 
 function Home() {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  useEffect(() => {
+    const checkScroll = () => {
+      if (window.scrollY  > 200) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', checkScroll);
+    return () => window.removeEventListener('scroll', checkScroll);
+}, []);
+
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
   return (
     <div>
       {" "}
@@ -130,8 +148,14 @@ function Home() {
           </Link>
         </div>
       </div>
+      {showScrollButton && (
+      <button onClick={scrollToTop} className="scroll-to-top">
+      </button>
+    )} 
     </div>
   );
+
+  
 }
 
 export default Home;
