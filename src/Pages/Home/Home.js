@@ -68,7 +68,7 @@ function Home() {
             className="full-width-image"
           />
           <h3 className="customer-name">Jimmy Cornelius - 2023 Bayliner Element M17 Boat</h3>
-          {/* Add customer-testimonial here <p> */}
+          <p>"Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"</p>
         </div>
         <div className="showcase-item">
           <img
@@ -100,7 +100,7 @@ function Home() {
             className="full-width-image"
           />
           <h3 className="customer-name">Jimmy Cornelius - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic</h3>
-          {/* Add customer-testimonial here <p> */}
+          <p>"A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"</p>
         </div>
         {/* Add more showcase items as needed */}
       </div>
