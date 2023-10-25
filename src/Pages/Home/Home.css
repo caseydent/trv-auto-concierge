@@ -58,7 +58,6 @@
 
 .customer-showcase {
   padding-top: 5.31rem;
-  padding-bottom: 5.31rem;
   background-color: #fff; /* Or any desired background color */
 }
 
@@ -72,7 +71,7 @@
   display: column;
   flex-direction: column;  /* Stack items vertically */
   align-items: center; 
-  margin-bottom: 4rem; /* Adjust for spacing between items */
+  padding-bottom: 5.31rem; /* Adjust for spacing between items */
 }
 
 .customer-name {
