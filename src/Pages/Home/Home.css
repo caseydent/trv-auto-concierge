@@ -107,7 +107,7 @@
 }
 
 .cta-link {
-  color: #a39e8e; /* Assuming this is the color you used earlier */
+  color: #40d4fc !important; /* Assuming this is the color you used earlier */
   text-decoration: none;
   margin: 0 1rem;
   font-weight: bold;
