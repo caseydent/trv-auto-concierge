@@ -67,8 +67,12 @@ function Home() {
             alt="Jimmy Cornelius"
             className="full-width-image"
           />
-          <h3 className="customer-name">Jimmy Cornelius - 2023 Bayliner Element M17 Boat</h3>
-          <p>"Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"</p>
+          <h3 className="customer-name">
+            Jimmy Cornelius - 2023 Bayliner Element M17 Boat
+          </h3>
+          <p>
+            "Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"
+          </p>
         </div>
         <div className="showcase-item">
           <img
@@ -76,12 +80,15 @@ function Home() {
             alt="Christine Knatz"
             className="full-width-image"
           />
-          <h3 className="customer-name">Christine Knatz - 2023 Yamaha Kodiak EPS 700 - Tactical Black</h3>
+          <h3 className="customer-name">
+            Christine Knatz - 2023 Yamaha Kodiak EPS 700 - Tactical Black
+          </h3>
           <p className="customer-testimonial">
-            "The 4 wheeler exceeded my expectations. From the handling to terrain it's truly an amazing machine.
-            I love how easy it is to start, maneuver due to power steering to the ease of going into reverse. 
-            I can now go into trails with steep incline and use my winch to remove trees in my way.
-            up!"
+            "The 4 wheeler exceeded my expectations. From the handling to
+            terrain it's truly an amazing machine. I love how easy it is to
+            start, maneuver due to power steering to the ease of going into
+            reverse. I can now go into trails with steep incline and use my
+            winch to remove trees in my way. up!"
           </p>
         </div>
         <div className="showcase-item">
@@ -99,10 +106,27 @@ function Home() {
             alt="Jimmy Cornelius"
             className="full-width-image"
           />
-          <h3 className="customer-name">Jimmy Cornelius - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic</h3>
-          <p>"A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"</p>
+          <h3 className="customer-name">
+            Jimmy Cornelius - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White
+            Metallic
+          </h3>
+          <p className="customer-testimonial">
+            "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
+          </p>
         </div>
         {/* Add more showcase items as needed */}
+      </div>
+      <div className="cta-section">
+        <h2>Ready to find your perfect vehicle?</h2>
+        <p>Get started today!</p>
+        <div className="cta-links">
+          <a href="/services" className="cta-link">
+            Services
+          </a>
+          <a href="/howitworks" className="cta-link">
+            How It Works
+          </a>
+        </div>
       </div>
     </div>
   );

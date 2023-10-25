@@ -58,6 +58,7 @@
 
 .customer-showcase {
   padding-top: 5.31rem;
+  padding-bottom: 5.31rem;
   background-color: #fff; /* Or any desired background color */
 }
 
@@ -85,4 +86,24 @@
   color: #777;
   padding: 0 2rem; /* Adjust the padding value as needed */
 }
+
+.cta-section {
+  padding-top: 5.31rem;
+  padding-bottom: 5.31rem;
+  color: #777; /* Setting the font color for the entire section */
+  background-color: #f7f7f7;
+}
+
+.cta-link {
+  color: #A39E8E; /* Assuming this is the color you used earlier */
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  color: #777;
+}
+
+.cta-link:hover {
+  text-decoration: underline; /* Optional: Add underline on hover for better UX */
+}
+
 
