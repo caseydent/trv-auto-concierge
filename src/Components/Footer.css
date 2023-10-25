@@ -2,12 +2,16 @@
   background-color: #333;
   color: white;
   padding-top: 5.31rem;
+  padding-bottom: 5.31rem;
 }
 
 .footer-content {
-  display: flex;
   justify-content: space-between;
   padding: 0 2rem; /* Adjust horizontal padding as desired */
+}
+
+.footer-about {
+  padding-bottom: 2rem;
 }
 
 .footer-about h3,
@@ -29,10 +33,10 @@
 }
 
 .footer-links a {
-  color: white;
+  color: #ADD8E6;
   text-decoration: none;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
+.footer-links a:active {
+    color: #87CEEB; /* A slightly different shade of blue for active tap state */
 }
