@@ -134,7 +134,7 @@ function Home() {
           </p>
         </div>
 
-        
+        {/* Repeat this structure for the rest of the showcase items, incrementing the refs.current index for each item. */}
 
       </div>
 
