@@ -73,20 +73,6 @@ function Home() {
       <div className="customer-showcase">
         <h2 className="showcase-title">Our Happy Customers</h2>
 
-        <div ref={el => refs.current[1] = el} className={`showcase-item ${animatedElements.includes(1) ? "fade-in-final" : "fade-in-initial"}`}>
-          <img
-            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698167117/Debbie_cauup3.png"
-            alt="Debbie Whalen"
-            className="full-width-image"
-          />
-          <h3 className="customer-name">Deanna Whalen - 2022 Ford Bronco</h3>
-          <p className="customer-testimonial">
-            "We were so excited, we couldn't resist sending you the picture and
-            would be thrilled if you share it. We still have the sign hanging
-            up!"
-          </p>
-        </div>
-
         <div ref={el => refs.current[2] = el} className={`showcase-item ${animatedElements.includes(2) ? "fade-in-final" : "fade-in-initial"}`}>
           <img
             src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
