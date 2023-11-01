@@ -6,7 +6,7 @@
     padding: 1rem 2rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 0.0625rem solid lightgray;
 }
 
 /* Flex container for the logo and headings */
@@ -58,7 +58,7 @@
     top: 50%; /* Adjusted to center vertically within the navbar */
     transform: translateY(-50%);
     background-color: black;
-    border: 1px solid #fff; /* Added a full border */
+    border: 0.0625rem solid #fff; /* Added a full border */
     padding: 0.25rem; /* Adjusting padding for even spacing */
     box-sizing: border-box;
     width: 2.5rem; /* Adjusted width */

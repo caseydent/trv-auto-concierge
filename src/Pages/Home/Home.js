@@ -96,7 +96,7 @@ function Home() {
           <h3 className="customer-name">
             Jimmy Cornelius - 2023 Bayliner Element M17 Boat
           </h3>
-          <p>
+          <p className="customer-testimonial">
             "Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"
           </p>
         </div>
@@ -116,6 +116,32 @@ function Home() {
             start, maneuver due to power steering to the ease of going into
             reverse. I can now go into trails with steep incline and use my
             winch to remove trees in my way."
+          </p>
+        </div>
+
+        <div ref={el => refs.current[4] = el} className={`showcase-item ${animatedElements.includes(4) ? "fade-in-final" : "fade-in-initial"}`}>
+          <img
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
+            alt="Danny Carr"
+            className="full-width-image"
+          />
+          <h3 className="customer-name">
+              Danny Carr - 2022 Ford EcoSport S
+          </h3>
+          {/* Customer Testimonial here <p></p> */}
+        </div>
+
+        <div ref={el => refs.current[5] = el} className={`showcase-item ${animatedElements.includes(5) ? "fade-in-final" : "fade-in-initial"}`}>
+          <img
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
+            alt="Jimmy Cornelius"
+            className="full-width-image"
+          />
+          <h3 className="customer-name">
+              2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic S
+          </h3>
+          <p className="customer-testimonial">
+            "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
           </p>
         </div>
 
