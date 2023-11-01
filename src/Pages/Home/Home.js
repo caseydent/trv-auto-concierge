@@ -80,7 +80,7 @@ function Home() {
             className="full-width-image"
           />
           <h3 className="customer-name">
-            Jimmy Cornelius - 2023 Bayliner Element M17 Boat
+            Jimmy - 2023 Bayliner Element M17 Boat
           </h3>
           <p className="customer-testimonial">
             "Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"
@@ -94,7 +94,7 @@ function Home() {
             className="full-width-image"
           />
           <h3 className="customer-name">
-            Christine Knatz - 2023 Yamaha Kodiak EPS 700 - Tactical Black
+            Christine - 2023 Yamaha Kodiak EPS 700 - Tactical Black
           </h3>
           <p className="customer-testimonial">
             "The 4 wheeler exceeded my expectations. From the handling to
@@ -112,9 +112,13 @@ function Home() {
             className="full-width-image"
           />
           <h3 className="customer-name">
-              Danny Carr - 2022 Ford EcoSport S
+              Danny - 2022 Ford EcoSport S
           </h3>
-          {/* Customer Testimonial here <p></p> */}
+            <p className="customer-testimonial">
+            "I am very happy with my EcoSport. At the dealership, I gave them my 
+            drivers license and insurance card, they gave me my Key! Easiest 
+            transaction ever."
+            </p>
         </div>
 
         <div ref={el => refs.current[5] = el} className={`showcase-item ${animatedElements.includes(5) ? "fade-in-final" : "fade-in-initial"}`}>
@@ -124,7 +128,7 @@ function Home() {
             className="full-width-image"
           />
           <h3 className="customer-name">
-              2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic S
+              Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic S
           </h3>
           <p className="customer-testimonial">
             "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
