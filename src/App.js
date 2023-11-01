@@ -1,5 +1,7 @@
 import "./App.css";
+import React, { Fragment } from 'react';
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer"
 import Home from "./Pages/Home/Home";
 import HowItWorks from "./Pages/Howitworks/Howitworks";
 import Services from "./Pages/Services/Services";
@@ -12,6 +14,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
+      <Fragment>
       <div className="App">
         <Navbar />
         {/* Routing logic starts here */}
@@ -25,6 +28,8 @@ function App() {
 
         {/* Routing logic ends here */}
       </div>
+      <Footer />
+      </Fragment>
     </Router>
   );
 }

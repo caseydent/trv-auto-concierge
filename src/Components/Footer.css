@@ -1,0 +1,79 @@
+/* The main styling for the footer. */
+.footer {
+  background-color: #333; /* Sets the background color of the footer to a dark gray. */
+  color: white; /* Sets the default font color for the footer to white. */
+  padding-top: 5.31rem; /* Provides space at the top of the footer. */
+  padding-bottom: 5.31rem; /* Provides space at the bottom of the footer. */
+}
+
+/* Styling the container that holds all the footer content. */
+.footer-content {
+  display: flex; /* Uses flexbox for layout. */
+  flex-direction: column; /* Stacks children elements vertically. */
+  justify-content: space-between; /* Distributes space between flex items. */
+  align-items: flex-start; /* Aligns items to the start (left) of the flex container. */
+  padding: 0 2rem; /* Provides horizontal padding on both sides. */
+}
+
+/* Styling the container that holds both the links and the logo. */
+.footer-links-logo-container {
+  display: flex; /* Uses flexbox for layout. */
+  justify-content: space-between; /* Distributes space between the links and logo. */
+  align-items: center; /* Centers items vertically in the flex container. */
+  width: 100%; /* Takes up the full width of its parent container. */
+}
+
+/* Styling for the links section. */
+.footer-links,
+  /* Styling for the logo section. */
+  .footer-logo {
+  width: auto; /* Lets the content define the width. */
+}
+
+/* Styling for the logo image. */
+.footer-logo img {
+  display: block; /* Displays the image as a block element. */
+  max-width: 12rem; /* Ensures the image doesn't exceed the container's width. */
+  height: auto; /* Maintains the image's aspect ratio. */
+}
+
+/* Styling for the "About" section in the footer. */
+.footer-about {
+  padding-bottom: 2rem; /* Provides space below the "About" section. */
+}
+
+/* Styling for the titles in the "About" section and the "Quick Links" section. */
+.footer-about h3,
+.footer-links h3 {
+  margin-bottom: 1rem; /* Provides space below the titles. */
+}
+
+/* Styling for the paragraph in the "About" section. */
+.footer-about p {
+  margin-bottom: 1rem; /* Provides space below the paragraph. */
+}
+
+/* Styling for the unordered list in the "Quick Links" section. */
+.footer-links ul {
+  list-style-type: none; /* Removes bullet points from the list. */
+  padding: 0; /* Removes default padding. */
+}
+
+/* Styling for the list items in the "Quick Links" section. */
+.footer-links li {
+  margin-bottom: 0.5rem; /* Provides space between each link. */
+}
+
+/* Styling for the anchor tags (links) in the "Quick Links" section. */
+.footer-links a {
+  color: #40d4fc; /* Sets link color to a light blue. */
+  font-weight: 500; /* Makes the font slightly bolder than normal. */
+  padding: 0.3125rem 0; /* Provides vertical padding for better tap-ability. */
+  display: block; /* Makes the links block-level for better tap-ability. */
+  text-decoration: none; /* Removes the default underline from the links. */
+}
+
+/* Styling for the active state of the links (when they are clicked/tapped). */
+.footer-links a:active {
+  color: #87ceeb; /* Sets the active link color to a slightly different shade of blue. */
+}
