@@ -129,8 +129,7 @@ function Home() {
             className="full-width-image"
           />
           <h3 className="customer-name">
-            Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White
-            Metallic
+              Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic S
           </h3>
           <p className="customer-testimonial">
             "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
@@ -138,7 +137,7 @@ function Home() {
 
         </div>
 
-        
+        {/* Repeat this structure for the rest of the showcase items, incrementing the refs.current index for each item. */}
 
       </div>
 
