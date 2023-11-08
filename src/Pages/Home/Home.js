@@ -71,7 +71,7 @@ function Home() {
       </div>
 
       <div className="customer-showcase">
-        <h2 className="showcase-title">Our Happy Customers</h2>
+        <h2 className="showcase-title">OUR HAPPY CUSTOMERS</h2>
 
         <div ref={el => refs.current[1] = el} className={`showcase-item ${animatedElements.includes(1) ? "fade-in-final" : "fade-in-initial"}`}>
           <img
