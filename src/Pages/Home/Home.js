@@ -73,7 +73,7 @@ function Home() {
       <div className="customer-showcase">
         <h2 className="showcase-title">Our Happy Customers</h2>
 
-        <div ref={el => refs.current[2] = el} className={`showcase-item ${animatedElements.includes(2) ? "fade-in-final" : "fade-in-initial"}`}>
+        <div ref={el => refs.current[1] = el} className={`showcase-item ${animatedElements.includes(1) ? "fade-in-final" : "fade-in-initial"}`}>
           <img
             src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
             alt="Jimmy Cornelius"
@@ -87,7 +87,7 @@ function Home() {
           </p>
         </div>
 
-        <div ref={el => refs.current[3] = el} className={`showcase-item ${animatedElements.includes(3) ? "fade-in-final" : "fade-in-initial"}`}>
+        <div ref={el => refs.current[2] = el} className={`showcase-item ${animatedElements.includes(2) ? "fade-in-final" : "fade-in-initial"}`}>
           <img
             src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
             alt="Christine Knatz"
@@ -105,23 +105,24 @@ function Home() {
           </p>
         </div>
 
-        <div ref={el => refs.current[4] = el} className={`showcase-item ${animatedElements.includes(4) ? "fade-in-final" : "fade-in-initial"}`}>
+        <div ref={el => refs.current[3] = el} className={`showcase-item ${animatedElements.includes(3) ? "fade-in-final" : "fade-in-initial"}`}>
           <img
             src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
             alt="Danny Carr"
             className="full-width-image"
           />
           <h3 className="customer-name">
-              Danny - 2022 Ford EcoSport S
+            Danny - 2022 Ford EcoSport S
           </h3>
-            <p className="customer-testimonial">
-            "I am very happy with my EcoSport. At the dealership, I gave them my 
-            drivers license and insurance card, they gave me my Key! Easiest 
-            transaction ever."
-            </p>
+          <p className="customer-testimonial">
+            "I am very happy with my EcoSport...At the dealership, I gave 
+            them my drivers license and insurance card, they gave me my Key!
+            Easiest transaction ever"
+          </p>
         </div>
+        
 
-        <div ref={el => refs.current[5] = el} className={`showcase-item ${animatedElements.includes(5) ? "fade-in-final" : "fade-in-initial"}`}>
+        <div ref={el => refs.current[4] = el} className={`showcase-item ${animatedElements.includes(4) ? "fade-in-final" : "fade-in-initial"}`}>
           <img
             src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
             alt="Jimmy Cornelius"
@@ -133,6 +134,7 @@ function Home() {
           <p className="customer-testimonial">
             "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
           </p>
+
         </div>
 
         {/* Repeat this structure for the rest of the showcase items, incrementing the refs.current index for each item. */}
