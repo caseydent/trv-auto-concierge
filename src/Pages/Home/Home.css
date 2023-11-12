@@ -107,7 +107,7 @@
 }
 
 .cta-link {
-  color: #40d4fc !important; /* Assuming this is the color you used earlier */
+  color: #40d4fc !important; 
   text-decoration: none;
   margin: 0 1rem;
   font-weight: bold;
@@ -144,10 +144,19 @@
   }
 
   .info-title {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Adjust as needed */
   }
 
   .info-content {
+    width: 70%; /* Adjust this value to control the width of the column */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
+  .showcase-title {
+    font-size: 1.4rem; /* Adjust as needed */
+  }
+
+  .cta-section h2 {
     width: 70%; /* Adjust this value to control the width of the column */
     margin: 0 auto; /* Center the container horizontally */
   }
