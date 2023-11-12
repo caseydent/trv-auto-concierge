@@ -1,144 +1,153 @@
 .navbar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    height: 7rem;
-    background-color: #fff;
-    border-bottom: 0.0625rem solid lightgray;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: 0.0625rem solid lightgray;
 }
 
 /* Flex container for the logo and headings */
 .navbar__content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .navbar__logo {
-    width: 4rem; /* Increased size for TRV Logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 0.5rem; /* Space between the logo and the headings */
+  width: 4rem; /* Increased size for TRV Logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 0.5rem; /* Space between the logo and the headings */
 }
 
 /* Flex container for the two headings */
 .navbar__headings {
-    display: flex;
-    flex-direction: column; /* Stack the headings vertically */
+  display: flex;
+  flex-direction: column; /* Stack the headings vertically */
 }
 
 /* For the top heading */
 .navbar__heading:first-child {
-    margin-bottom: 0;
-    align-self: flex-start;
+  margin-bottom: 0;
+  align-self: flex-start;
 }
 
 /* For the bottom heading (it should already be at the top left) */
 .navbar__heading:last-child {
-    margin-bottom: 0;
-    align-self: flex-start;
+  margin-bottom: 0;
+  align-self: flex-start;
 }
 
 .navbar__heading {
-    font-size: 1.5rem; /* Adjust the size of the text */
-    color: black; /* Adjust the color of the text */
-    letter-spacing: 0.04rem; /* Adjust the spacing between letters */
-    margin-top: 0rem; /* Space between the logo and the heading */
-    font-weight: 500; /* Medium bold weight */
-    font-family: 'Montserrat';
+  font-size: 1.5rem; /* Adjust the size of the text */
+  color: black; /* Adjust the color of the text */
+  letter-spacing: 0.04rem; /* Adjust the spacing between letters */
+  margin-top: 0rem; /* Space between the logo and the heading */
+  font-weight: 500; /* Medium bold weight */
+  font-family: "Montserrat";
 }
 
 .icon-burger {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 15%;
-    top: 50%; /* Adjusted to center vertically within the navbar */
-    transform: translateY(-50%);
-    background-color: black;
-    border: 0.0625rem solid #fff; /* Added a full border */
-    padding: 0.25rem; /* Adjusting padding for even spacing */
-    box-sizing: border-box;
-    width: 2.5rem; /* Adjusted width */
-    height: 2.5rem; /* Adjusted height */
-    justify-content: center; /* Centering the lines vertically */
-    align-items: center; /* Centering the lines horizontally */
-    transition: background-color 0.5s; /* Keep the transition duration the same */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 15%;
+  top: 50%; /* Adjusted to center vertically within the navbar */
+  transform: translateY(-50%);
+  background-color: #555555;
+  border: 0.0625rem solid #fff; /* Added a full border */
+  padding: 0.25rem; /* Adjusting padding for even spacing */
+  box-sizing: border-box;
+  width: 2.5rem; /* Adjusted width */
+  height: 2.5rem; /* Adjusted height */
+  justify-content: center; /* Centering the lines vertically */
+  align-items: center; /* Centering the lines horizontally */
+  transition: background-color 0.5s; /* Keep the transition duration the same */
 }
 
 .icon-burger .line {
-    width: 1.8rem;
-    height: 0.313rem;
-    background-color: #fff;
-    margin: 0.188rem 0;
-    transition: background-color 0.5s, transform 0.5s; /* Keep the transition durations the same */
+  width: 1.8rem;
+  height: 0.313rem;
+  background-color: #fff;
+  margin: 0.188rem 0;
+  transition: background-color 0.5s, transform 0.5s; /* Keep the transition durations the same */
 }
 
 .icon-burger.active {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .icon-burger.active .line {
-    background-color: #303030;
+  background-color: #303030;
 }
 
 .icon-burger.active .line:nth-child(1) {
-    transform: rotate(45deg);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -0.156rem;
-    margin-left: -0.938rem;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.156rem;
+  margin-left: -0.938rem;
 }
 
 .icon-burger.active .line:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .icon-burger.active .line:nth-child(3) {
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -0.156rem;
-    margin-left: -0.938rem;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.156rem;
+  margin-left: -0.938rem;
 }
 
 .menu-container {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positioned relative to the navbar */
-    top: 100%; /* Start from the bottom of the navbar */
-    width: 100%; /* Take full width of the viewport */
-    background-color: #303030; /* Same as the hamburger icon */
-    text-align: center; /* Center each menu item horizontally */
-    opacity: 0; /* Start with 0 opacity for fade-in effect */
-    transition: opacity 0.2s ease-in-out; /* Fade-in effect */
-    width: 80%; /* Adjust to desired width */
-    margin: 0 auto; /* Center it horizontally */
-    left: 0;
-    right: 0;
+  display: none; /* Hidden by default */
+  position: absolute; /* Positioned relative to the navbar */
+  top: 100%; /* Start from the bottom of the navbar */
+  width: 100%; /* Take full width of the viewport */
+  background-color: #303030; /* Same as the hamburger icon */
+  text-align: center; /* Center each menu item horizontally */
+  opacity: 0; /* Start with 0 opacity for fade-in effect */
+  transition: opacity 0.2s ease-in-out; /* Fade-in effect */
+  width: 80%; /* Adjust to desired width */
+  margin: 0 auto; /* Center it horizontally */
+  left: 0;
+  right: 0;
 }
 
 .menu-item {
-    display: block;
-    text-decoration: none;
-    margin: 1rem 0;  /* Adjust as needed to space them out vertically */
-    color: inherit;  /* Make sure the color is consistent with the parent */
-    padding: .3rem 0; /* Even vertical spacing */
-    color: #fff; /* White text color for contrast */
-    font-size: 1.2rem; /* Adjust font size as needed */
-    cursor: pointer; /* Indicate interactivity */
+  display: block;
+  text-decoration: none;
+  margin: 1rem 0; /* Adjust as needed to space them out vertically */
+  color: inherit; /* Make sure the color is consistent with the parent */
+  padding: 0.3rem 0; /* Even vertical spacing */
+  color: #fff; /* White text color for contrast */
+  font-size: 1.2rem; /* Adjust font size as needed */
+  cursor: pointer; /* Indicate interactivity */
 }
 
 /* Active state for the menu when hamburger icon is clicked */
 .icon-burger.active + .menu-container {
-    display: block; /* Show the menu */
-    opacity: 1; /* Fade in to full opacity */
-} 
+  display: block; /* Show the menu */
+  opacity: 1; /* Fade in to full opacity */
+}
 
-@media only screen and (max-width: 320px) {
-    /* Adjust styles for smaller devices here */
+@media only screen and (max-width: 380px) {
+  /* Adjust styles for smaller devices here */
+  .navbar__logo {
+    width: 3rem; /* Increased size for TRV Logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0.5rem; /* Space between the logo and the headings */
   }
-  
+
+  .navbar__heading {
+    font-size: 1.1rem; /* Adjust the size of the text */
+    font-weight: bold;
+  }
+}
