@@ -17,4 +17,4 @@ jobs:
 
       - name: Sync Branches
         run: |
-          ./path-to-your-script.ps1
+          ./post-merge.ps1
