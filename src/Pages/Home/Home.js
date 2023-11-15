@@ -1,5 +1,5 @@
 import "./Home.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
 
 function Home() {
@@ -17,18 +17,22 @@ function Home() {
 
       refs.current.forEach((ref, index) => {
         const rect = ref.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0 && !animatedElements.includes(index)) {
-          setAnimatedElements(prev => [...prev, index]);
+        if (
+          rect.top <= window.innerHeight &&
+          rect.bottom >= 0 &&
+          !animatedElements.includes(index)
+        ) {
+          setAnimatedElements((prev) => [...prev, index]);
         }
       });
     };
 
-    window.addEventListener('scroll', checkScroll);
-    return () => window.removeEventListener('scroll', checkScroll);
+    window.addEventListener("scroll", checkScroll);
+    return () => window.removeEventListener("scroll", checkScroll);
   }, [animatedElements]);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -49,7 +53,12 @@ function Home() {
         </div>
       </div>
 
-      <div ref={el => refs.current[0] = el} className={`info-section ${animatedElements.includes(0) ? "fade-in-final" : "fade-in-initial"}`}>
+      <div
+        ref={(el) => (refs.current[0] = el)}
+        className={`info-section ${
+          animatedElements.includes(0) ? "fade-in-final" : "fade-in-initial"
+        }`}
+      >
         <div className="info-content">
           <h2 className="info-title">WHAT WE DO</h2>
           <p className="info-text">
@@ -73,12 +82,19 @@ function Home() {
       <div className="customer-showcase">
         <h2 className="showcase-title">OUR HAPPY CUSTOMERS</h2>
 
-        <div ref={el => refs.current[1] = el} className={`showcase-item ${animatedElements.includes(1) ? "fade-in-final" : "fade-in-initial"}`}>
-          <img
-            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
-            alt="Jimmy Cornelius"
-            className="full-width-image"
-          />
+        <div
+          ref={(el) => (refs.current[1] = el)}
+          className={`showcase-item ${
+            animatedElements.includes(1) ? "fade-in-final" : "fade-in-initial"
+          }`}
+        >
+          <div className="image-wrapper">
+            <img
+              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
+              alt="Jimmy Cornelius"
+              className="full-width-image-cs"
+            />
+          </div>
           <h3 className="customer-name">
             Jimmy - 2023 Bayliner Element M17 Boat
           </h3>
@@ -87,12 +103,19 @@ function Home() {
           </p>
         </div>
 
-        <div ref={el => refs.current[2] = el} className={`showcase-item ${animatedElements.includes(2) ? "fade-in-final" : "fade-in-initial"}`}>
-          <img
-            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
-            alt="Christine Knatz"
-            className="full-width-image"
-          />
+        <div
+          ref={(el) => (refs.current[2] = el)}
+          className={`showcase-item ${
+            animatedElements.includes(2) ? "fade-in-final" : "fade-in-initial"
+          }`}
+        >
+          <div className="image-wrapper">
+            <img
+              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
+              alt="Christine Knatz"
+              className="full-width-image-cs"
+            />
+          </div>
           <h3 className="customer-name">
             Christine - 2023 Yamaha Kodiak EPS 700 - Tactical Black
           </h3>
@@ -105,40 +128,49 @@ function Home() {
           </p>
         </div>
 
-        <div ref={el => refs.current[3] = el} className={`showcase-item ${animatedElements.includes(3) ? "fade-in-final" : "fade-in-initial"}`}>
-          <img
-            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
-            alt="Danny Carr"
-            className="full-width-image"
-          />
-          <h3 className="customer-name">
-            Danny - 2022 Ford EcoSport S
-          </h3>
+        <div
+          ref={(el) => (refs.current[3] = el)}
+          className={`showcase-item ${
+            animatedElements.includes(3) ? "fade-in-final" : "fade-in-initial"
+          }`}
+        >
+          <div className="image-wrapper">
+            <img
+              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
+              alt="Danny Carr"
+              className="full-width-image-cs"
+            />
+          </div>
+          <h3 className="customer-name">Danny - 2022 Ford EcoSport S</h3>
           <p className="customer-testimonial">
-            "I am very happy with my EcoSport...At the dealership, I gave 
-            them my drivers license and insurance card, they gave me my Key!
-            Easiest transaction ever"
+            "I am very happy with my EcoSport...At the dealership, I gave them
+            my drivers license and insurance card, they gave me my Key! Easiest
+            transaction ever"
           </p>
         </div>
-        
 
-        <div ref={el => refs.current[4] = el} className={`showcase-item ${animatedElements.includes(4) ? "fade-in-final" : "fade-in-initial"}`}>
-          <img
-            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
-            alt="Jimmy Cornelius"
-            className="full-width-image"
-          />
+        <div
+          ref={(el) => (refs.current[4] = el)}
+          className={`showcase-item ${
+            animatedElements.includes(4) ? "fade-in-final" : "fade-in-initial"
+          }`}
+        >
+          <div className="image-wrapper">
+            <img
+              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
+              alt="Jimmy Cornelius"
+              className="full-width-image-cs"
+            />
+          </div>
           <h3 className="customer-name">
-              Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic S
+            Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic S
           </h3>
           <p className="customer-testimonial">
             "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
           </p>
-
         </div>
 
         {/* Repeat this structure for the rest of the showcase items, incrementing the refs.current index for each item. */}
-
       </div>
 
       <div className="cta-section">
@@ -156,8 +188,8 @@ function Home() {
 
       {showScrollButton && (
         <button onClick={scrollToTop} className="scroll-to-top">
-          <img 
-            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698237417/SeekPng.com_grey-png_2162589_irw3sb.png" 
+          <img
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698237417/SeekPng.com_grey-png_2162589_irw3sb.png"
             alt="Scroll to top"
           />
         </button>
