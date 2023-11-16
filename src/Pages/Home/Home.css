@@ -72,6 +72,8 @@
 .customer-showcase {
   padding-top: 5.31rem;
   background-color: #fff; /* Or any desired background color */
+  display: grid;
+  grid-template-columns: 1fr; /* Single column by default */
 }
 
 .showcase-title {
@@ -82,7 +84,7 @@
 
 .image-wrapper {
   width: 100%; /* Adjust as needed */
-  padding-top: 56.25%; /* For 16:9 Aspect Ratio (height/width * 100%) */
+  padding-top: 75%; /* For 16:9 Aspect Ratio (height/width * 100%) */
   position: relative;
 }
 
