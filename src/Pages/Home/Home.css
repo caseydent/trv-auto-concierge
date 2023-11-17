@@ -124,7 +124,7 @@
 }
 
 .cta-link {
-  color: #40d4fc !important; 
+  color: #40d4fc !important;
   text-decoration: none;
   margin: 0 1rem;
   font-weight: bold;
@@ -176,5 +176,16 @@
   .cta-section h2 {
     width: 70%; /* Adjust this value to control the width of the column */
     margin: 0 auto; /* Center the container horizontally */
+  }
+}
+
+@media (min-width: 480px) {
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;/* Ensures items can wrap onto the next line */
+    justify-content: center; /* Centers items in the container */
+  }
+  .showcase-item {
+    width: 50%; /* or some other percentage */
   }
 }

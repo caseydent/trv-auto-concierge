@@ -81,7 +81,7 @@ function Home() {
 
       <div className="customer-showcase">
         <h2 className="showcase-title">OUR HAPPY CUSTOMERS</h2>
-
+        <div className="image-container">
         <div
           ref={(el) => (refs.current[1] = el)}
           className={`showcase-item ${
@@ -194,6 +194,7 @@ function Home() {
           />
         </button>
       )}
+      </div>
     </div>
   );
 }
