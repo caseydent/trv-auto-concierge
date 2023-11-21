@@ -180,12 +180,22 @@
 }
 
 @media (min-width: 480px) {
-  .image-container {
-    display: flex;
-    flex-wrap: wrap;/* Ensures items can wrap onto the next line */
-    justify-content: center; /* Centers items in the container */
+  .carousel-container {
+      display: block;
   }
+
   .showcase-item {
-    width: 50%; /* or some other percentage */
+      display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .carousel-container {
+      display: none;
+  }
+
+  .showcase-item {
+      display: block;
+  }
+}
+
