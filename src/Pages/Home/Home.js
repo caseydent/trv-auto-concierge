@@ -1,7 +1,7 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // This imports the default styling
 
 function Home() {
@@ -86,145 +86,177 @@ function Home() {
         <div className="image-container">
           {/* Carousel for viewports wider than 480px */}
           <div className="carousel-container">
-            <Carousel showThumbs={false} showStatus={false} infiniteLoop useKeyboardArrows>
+            <Carousel
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+              useKeyboardArrows
+            >
               {/* Repeat this structure for each item */}
               <div>
-                    <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg" alt="Jimmy Cornelius" />
-                    <p className="legend">Jimmy - 2023 Bayliner Element M17 Boat: "Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"</p>
-                </div>
-                <div>
-                    <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg" alt="Christine Knatz" />
-                    <p className="legend">Christine - 2023 Yamaha Kodiak EPS 700 - Tactical Black: "The 4 wheeler exceeded my expectations. From the handling to
-                                          terrain it's truly an amazing machine. I love how easy it is to start, maneuver due to power steering to the ease of going into
-                                          reverse. I can now go into trails with steep incline and use my
-                                          winch to remove trees in my way."</p>
-                </div>
-                <div>
-                    <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png" alt="Danny Carr" />
-                    <p className="legend">Danny - 2022 Ford EcoSport S: "I am very happy with my EcoSport...At the dealership, I gave them
-                                                  my drivers license and insurance card, they gave me my Key! Easiest
-                                                  transaction ever"</p>
-                </div>
-                <div>
-                    <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png" alt="Jimmy Cornelius" />
-                    <p className="legend">Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic S: "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"</p>
-                </div>
+                <img
+                  src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
+                  alt="Jimmy Cornelius"
+                />
+                <p className="legend">
+                  Jimmy - 2023 Bayliner Element M17 Boat: "Enjoying the Bayliner
+                  Element M17 on the water at Tampa Bay, FL"
+                </p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
+                  alt="Christine Knatz"
+                />
+                <p className="legend">
+                  Christine - 2023 Yamaha Kodiak EPS 700 - Tactical Black: "The
+                  4 wheeler exceeded my expectations. From the handling to
+                  terrain it's truly an amazing machine. I love how easy it is
+                  to start, maneuver due to power steering to the ease of going
+                  into reverse. I can now go into trails with steep incline and
+                  use my winch to remove trees in my way."
+                </p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
+                  alt="Danny Carr"
+                />
+                <p className="legend">
+                  Danny - 2022 Ford EcoSport S: "I am very happy with my
+                  EcoSport...At the dealership, I gave them my drivers license
+                  and insurance card, they gave me my Key! Easiest transaction
+                  ever"
+                </p>
+              </div>
+              <div>
+                <img
+                  src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
+                  alt="Jimmy Cornelius"
+                />
+                <p className="legend">
+                  Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White
+                  Metallic S: "A beautiful day in Tampa, FL with my Ford F-150
+                  Lariat 4X4"
+                </p>
+              </div>
             </Carousel>
           </div>
 
-            {/* Existing structure for viewports less than 480px */}
-        <div
-          ref={(el) => (refs.current[1] = el)}
-          className={`showcase-item ${
-            animatedElements.includes(1) ? "fade-in-final" : "fade-in-initial"
-          }`}
-        >
-          <div className="image-wrapper">
-            <img
-              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
-              alt="Jimmy Cornelius"
-              className="full-width-image-cs"
-            />
+          {/* Existing structure for viewports less than 480px */}
+          <div
+            ref={(el) => (refs.current[1] = el)}
+            className={`showcase-item ${
+              animatedElements.includes(1) ? "fade-in-final" : "fade-in-initial"
+            }`}
+          >
+            <div className="image-wrapper">
+              <img
+                src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
+                alt="Jimmy Cornelius"
+                className="full-width-image-cs"
+              />
+            </div>
+            <h3 className="customer-name">
+              Jimmy - 2023 Bayliner Element M17 Boat
+            </h3>
+            <p className="customer-testimonial">
+              "Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"
+            </p>
           </div>
-          <h3 className="customer-name">
-            Jimmy - 2023 Bayliner Element M17 Boat
-          </h3>
-          <p className="customer-testimonial">
-            "Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"
-          </p>
-        </div>
 
-        <div
-          ref={(el) => (refs.current[2] = el)}
-          className={`showcase-item ${
-            animatedElements.includes(2) ? "fade-in-final" : "fade-in-initial"
-          }`}
-        >
-          <div className="image-wrapper">
-            <img
-              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
-              alt="Christine Knatz"
-              className="full-width-image-cs"
-            />
+          <div
+            ref={(el) => (refs.current[2] = el)}
+            className={`showcase-item ${
+              animatedElements.includes(2) ? "fade-in-final" : "fade-in-initial"
+            }`}
+          >
+            <div className="image-wrapper">
+              <img
+                src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
+                alt="Christine Knatz"
+                className="full-width-image-cs"
+              />
+            </div>
+            <h3 className="customer-name">
+              Christine - 2023 Yamaha Kodiak EPS 700 - Tactical Black
+            </h3>
+            <p className="customer-testimonial">
+              "The 4 wheeler exceeded my expectations. From the handling to
+              terrain it's truly an amazing machine. I love how easy it is to
+              start, maneuver due to power steering to the ease of going into
+              reverse. I can now go into trails with steep incline and use my
+              winch to remove trees in my way."
+            </p>
           </div>
-          <h3 className="customer-name">
-            Christine - 2023 Yamaha Kodiak EPS 700 - Tactical Black
-          </h3>
-          <p className="customer-testimonial">
-            "The 4 wheeler exceeded my expectations. From the handling to
-            terrain it's truly an amazing machine. I love how easy it is to
-            start, maneuver due to power steering to the ease of going into
-            reverse. I can now go into trails with steep incline and use my
-            winch to remove trees in my way."
-          </p>
-        </div>
 
-        <div
-          ref={(el) => (refs.current[3] = el)}
-          className={`showcase-item ${
-            animatedElements.includes(3) ? "fade-in-final" : "fade-in-initial"
-          }`}
-        >
-          <div className="image-wrapper">
-            <img
-              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
-              alt="Danny Carr"
-              className="full-width-image-cs"
-            />
+          <div
+            ref={(el) => (refs.current[3] = el)}
+            className={`showcase-item ${
+              animatedElements.includes(3) ? "fade-in-final" : "fade-in-initial"
+            }`}
+          >
+            <div className="image-wrapper">
+              <img
+                src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
+                alt="Danny Carr"
+                className="full-width-image-cs"
+              />
+            </div>
+            <h3 className="customer-name">Danny - 2022 Ford EcoSport S</h3>
+            <p className="customer-testimonial">
+              "I am very happy with my EcoSport...At the dealership, I gave them
+              my drivers license and insurance card, they gave me my Key!
+              Easiest transaction ever"
+            </p>
           </div>
-          <h3 className="customer-name">Danny - 2022 Ford EcoSport S</h3>
-          <p className="customer-testimonial">
-            "I am very happy with my EcoSport...At the dealership, I gave them
-            my drivers license and insurance card, they gave me my Key! Easiest
-            transaction ever"
-          </p>
-        </div>
 
-        <div
-          ref={(el) => (refs.current[4] = el)}
-          className={`showcase-item ${
-            animatedElements.includes(4) ? "fade-in-final" : "fade-in-initial"
-          }`}
-        >
-          <div className="image-wrapper">
-            <img
-              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
-              alt="Jimmy Cornelius"
-              className="full-width-image-cs"
-            />
+          <div
+            ref={(el) => (refs.current[4] = el)}
+            className={`showcase-item ${
+              animatedElements.includes(4) ? "fade-in-final" : "fade-in-initial"
+            }`}
+          >
+            <div className="image-wrapper">
+              <img
+                src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
+                alt="Jimmy Cornelius"
+                className="full-width-image-cs"
+              />
+            </div>
+            <h3 className="customer-name">
+              Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic
+              S
+            </h3>
+            <p className="customer-testimonial">
+              "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
+            </p>
           </div>
-          <h3 className="customer-name">
-            Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic S
-          </h3>
-          <p className="customer-testimonial">
-            "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
-          </p>
+
+          {/* Repeat this structure for the rest of the showcase items, incrementing the refs.current index for each item. */}
         </div>
 
-        {/* Repeat this structure for the rest of the showcase items, incrementing the refs.current index for each item. */}
-      </div>
-
-      <div className="cta-section">
-        <h2>Ready to find your perfect vehicle?</h2>
-        <p>Get started today!</p>
-        <div className="cta-links">
-          <Link to="/services" className="cta-link">
-            Services
-          </Link>
-          <Link to="/howitworks" className="cta-link">
-            How It Works
-          </Link>
+        <div className="cta-section">
+          <h2>Ready to find your perfect vehicle?</h2>
+          <p>Get started today!</p>
+          <div className="cta-links">
+            <Link to="/services" className="cta-link">
+              Services
+            </Link>
+            <Link to="/howitworks" className="cta-link">
+              How It Works
+            </Link>
+          </div>
         </div>
-      </div>
 
-      {showScrollButton && (
-        <button onClick={scrollToTop} className="scroll-to-top">
-          <img
-            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698237417/SeekPng.com_grey-png_2162589_irw3sb.png"
-            alt="Scroll to top"
-          />
-        </button>
-      )}
+        {showScrollButton && (
+          <button onClick={scrollToTop} className="scroll-to-top">
+            <img
+              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698237417/SeekPng.com_grey-png_2162589_irw3sb.png"
+              alt="Scroll to top"
+            />
+          </button>
+        )}
       </div>
     </div>
   );
