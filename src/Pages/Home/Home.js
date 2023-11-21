@@ -1,8 +1,6 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
-import Swiper, { Pagination, Autoplay } from 'swiper';
-import 'swiper/swiper-bundle.min.css';
 
 function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -29,34 +27,6 @@ function Home() {
       });
     };
 
-    window.addEventListener("scroll", checkScroll);
-
-    function initSwiper() {
-      if (window.innerWidth >= 480) {
-        new Swiper('.customer-showcase', {
-          modules: [Pagination, Autoplay],
-          loop: true,
-          effect: 'fade',
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-          },
-          fadeEffect: {
-            crossFade: true
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        });
-      }
-    }
-
-    // Initialize Swiper
-    initSwiper();
-
-    // Reinitialize Swiper on window resize
-    window.addEventListener('resize', initSwiper);
     window.addEventListener("scroll", checkScroll);
     return () => window.removeEventListener("scroll", checkScroll);
   }, [animatedElements]);
