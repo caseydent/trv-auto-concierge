@@ -1,8 +1,6 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
-import AwesomeSlider from "react-awesome-slider";
-import "react-awesome-slider/dist/styles.css";
 
 function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -80,82 +78,9 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div className="customer-showcase">
         <h2 className="showcase-title">OUR HAPPY CUSTOMERS</h2>
         <div className="image-container">
-          {/* Slider content here */}
-          <AwesomeSlider animation="fade">
-            <div className="slide-content">
-              <div className="image-wrapper">
-                <img
-                  src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
-                  alt="Jimmy Cornelius"
-                  className="full-width-image-cs"
-                />
-              </div>
-
-              <h3 className="customer-name">
-                Jimmy - 2023 Bayliner Element M17 Boat
-              </h3>
-              <p className="customer-testimonial">
-                "Enjoying the Bayliner Element M17 on the water at Tampa Bay,
-                FL"
-              </p>
-            </div>
-            <div className="slide-content">
-              <div className="image-wrapper">
-                <img
-                  src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
-                  alt="Christine Knatz"
-                  className="full-width-image-cs"
-                />
-              </div>
-              <h3 className="customer-name">
-                Christine - 2023 Yamaha Kodiak EPS 700 - Tactical Black
-              </h3>
-              <p className="customer-testimonial">
-                "The 4 wheeler exceeded my expectations. From the handling to
-                terrain it's truly an amazing machine. I love how easy it is to
-                start, maneuver due to power steering to the ease of going into
-                reverse. I can now go into trails with steep incline and use my
-                winch to remove trees in my way."
-              </p>
-            </div>
-            <div className="slide-content">
-              <div className="image-wrapper">
-                <img
-                  src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
-                  alt="Danny Carr"
-                  className="full-width-image-cs"
-                />
-              </div>
-              <h3 className="customer-name">Danny - 2022 Ford EcoSport S</h3>
-              <p className="customer-testimonial">
-                "I am very happy with my EcoSport...At the dealership, I gave
-                them my drivers license and insurance card, they gave me my Key!
-                Easiest transaction ever"
-              </p>
-            </div>
-            <div className="slide-content">
-              <div className="image-wrapper">
-                <img
-                  src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
-                  alt="Jimmy Cornelius"
-                  className="full-width-image-cs"
-                />
-              </div>
-              <h3 className="customer-name">
-                Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White
-                Metallic S
-              </h3>
-              <p className="customer-testimonial">
-                "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
-              </p>
-            </div>
-          </AwesomeSlider>
-
-          {/* Single column layout content here */}
           <div
             ref={(el) => (refs.current[1] = el)}
             className={`showcase-item ${

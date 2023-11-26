@@ -69,16 +69,6 @@
   margin-top: 4rem; /* Adjust as needed */
 }
 
-.slide-content {
-  position: absolute;
-  bottom: 10%; /* Adjust as needed */
-  left: 5%; /* Adjust as needed */
-  color: white; /* Adjust text color as needed */
-  background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
-  padding: 10px;
-  border-radius: 5px;
-}
-
 .customer-showcase {
   padding-top: 5.31rem;
   background-color: #fff; /* Or any desired background color */
@@ -190,28 +180,7 @@
 }
 
 @media (min-width: 480px) {
-  .image-container .showcase-item {
-    display: none; /* Hide single column content */
-  }
-
-  .image-container .awssld {
-    display: block; /* Show slider */
-  }
-
-  .awssld__bullets {
-    display: none;
-  }
 }
 
 @media (max-width: 479px) {
-  .image-container .awssld {
-    display: none; /* Hide slider */
-  }
-
-  .image-container .showcase-item {
-    display: block; /* Show single column content */
-  }
 }
-
-
-
