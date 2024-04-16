@@ -121,6 +121,12 @@
   right: 0;
 }
 
+.menu-container.show {
+  display: block;
+  opacity: 1;
+  /* Transition or other styles for the visible state */
+}
+
 .menu-item {
   display: block;
   text-decoration: none;
@@ -149,5 +155,39 @@
   .navbar__heading {
     font-size: 1.1rem; /* Adjust the size of the text */
     font-weight: bold;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: center; /* Center items within the navbar */
+  }
+
+  .navbar__content {
+    flex-direction: column; /* Stack logo and headings vertically */
+    align-items: center; /* Center the content */
+  }
+
+  .icon-burger {
+    display: none; /* Hide the hamburger menu */
+  }
+
+  .menu-container {
+    display: flex; /* Change display to flex to align items in a row */
+    flex-direction: row; /* Align menu items horizontally */
+    justify-content: center; /* Center menu items horizontally */
+    position: static; /* Remove absolute positioning to flow normally */
+    background-color: transparent; /* Clear any background color */
+    width: 100%; /* Full width to spread across */
+    margin-top: 0.5rem; /* Space between title and menu items */
+    opacity: 1; /* Fully visible */
+  }
+
+  .menu-item {
+    display: block; /* Ensure each menu item is a block for alignment */
+    margin: 0 15px; /* Spacing between menu items */
+    color: black; /* Ensure visible text color */
+    text-decoration: none; /* Clean link style */
   }
 }
