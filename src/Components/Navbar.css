@@ -159,40 +159,68 @@
 }
 
 @media (min-width: 768px) {
+  /* Adjust styles for larger devices here */
   .navbar {
-    flex-direction: column; /* Stack logo and menu vertically */
-    align-items: center; /* Center items within the navbar */
-    border-bottom: none;
+    display: flex;
+    flex-direction: column; /* Vertically stack elements */
+    align-items: center; /* Center all items horizontally */
+    justify-content: center; /* Center vertically */
+    height: auto; /* Allow navbar height to adjust to content */
+    text-align: center; /* Ensure text aligns centrally */
+    border-bottom: none; /* Removes bottom border */
   }
 
   .navbar__content {
-    flex-direction: column; /* Stack logo and headings vertically */
-    align-items: center; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the logo and headings container */
+    justify-content: center; /* Center content vertically */
+    width: 100%; /* Use full width to ensure centering */
   }
 
   .icon-burger {
-    display: none; /* Hide the hamburger menu */
+    display: none; /* Hide the hamburger menu icon */
   }
 
+  /* Ensure menu options are visible and styled correctly */
   .menu-container {
-    display: flex; /* Change display to flex to align items in a row */
-    flex-direction: row; /* Align menu items horizontally */
-    justify-content: center; /* Center menu items horizontally */
-    position: static; /* Remove absolute positioning to flow normally */
-    background-color: transparent; /* Clear any background color */
-    width: 100%; /* Full width to spread across */
-    margin-top: 0.5rem; /* Space between title and menu items */
+    display: flex; /* Ensure the container is visible */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Full width */
+    background-color: transparent; /* Or set to navbar background color */
+    position: static; /* Normal document flow */
     opacity: 1; /* Fully visible */
   }
 
   .menu-item {
-    display: block; /* Ensure each menu item is a block for alignment */
-    margin: 0 15px; /* Spacing between menu items */
-    color: black; /* Ensure visible text color */
-    text-decoration: none; /* Clean link style */
+    display: block; /* Display menu items */
+    margin: 0 0.9375rem; /* Spacing between items */
+    color: black; /* Text color */
+    text-decoration: none; /* No underline */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Cursor for clickable items */
   }
 
-  .home-section {
-    padding-top: 3.25rem; /* Adjust this value based on your menu's height */
+  .navbar__headings {
+    width: 100%; /* Full width to center the text properly */
+    text-align: center; /* Center the headings text */
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.2rem;
+    margin-bottom: 2rem;
+    align-items: center; /* Override any other alignment */
+  }
+
+  .navbar__heading h1{
+    align-self: center;
+    margin: 0.3125rem 0;
+  }
+
+  .navbar__heading:first-child, .navbar__heading:last-child {
+    align-self: center; /* Ensure both headings are centered */
   }
 }
+
+
+
