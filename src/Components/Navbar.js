@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // Import NavLink instead of Link
 import './Navbar.css';
 
 const Navbar = () => {
@@ -46,11 +46,11 @@ const Navbar = () => {
                 <div className="line"></div>
             </div>
             <div className={`menu-container${isMenuVisible ? ' show' : ''}`}>
-                <Link to="/" className="menu-item" onClick={toggleMenu}>Home</Link>
-                <Link to="/how-it-works" className="menu-item" onClick={toggleMenu}>How It Works</Link>
-                <Link to="/services" className="menu-item" onClick={toggleMenu}>Services</Link>
-                <Link to="/about-us" className="menu-item" onClick={toggleMenu}>About Us</Link>
-                <Link to="/contact" className="menu-item" onClick={toggleMenu}>Contact</Link>
+                <NavLink to="/" exact className="menu-item" activeClassName="active" onClick={toggleMenu}>Home</NavLink>
+                <NavLink to="/how-it-works" className="menu-item" activeClassName="active" onClick={toggleMenu}>How It Works</NavLink>
+                <NavLink to="/services" className="menu-item" activeClassName="active" onClick={toggleMenu}>Services</NavLink>
+                <NavLink to="/about-us" className="menu-item" activeClassName="active" onClick={toggleMenu}>About Us</NavLink>
+                <NavLink to="/contact" className="menu-item" activeClassName="active" onClick={toggleMenu}>Contact</NavLink>
             </div>
         </nav>
     );
