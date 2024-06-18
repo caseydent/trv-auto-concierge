@@ -19,7 +19,8 @@
   font-size: 1.4rem; /* Adjust as needed */
   line-height: 2rem; /* Adjust this value as needed */
   color: #777; /* Adjust as needed */
-  
+  position: relative; /* Ensure the pseudo-elements are positioned correctly */
+  z-index: 1; /* Ensure the subheading text is above the pseudo-elements */
 }
 
 .home-subheading {
@@ -27,6 +28,8 @@
   line-height: 1.6rem; /* Adjust this value as needed */
   color: #777; /* Adjust as needed */
   margin-top: 1rem; /* Add some spacing between the heading and subheading */
+  position: relative; /* Ensure the pseudo-elements are positioned correctly */
+  z-index: 1; /* Ensure the heading text is above the pseudo-elements */
 }
 
 /* Initial State */
@@ -191,17 +194,23 @@
     font-size: 1.3rem;
   }
 
+  .home-heading .break-line::before {
+    content: "\A";
+    white-space: pre;
+  }
+
   .home-heading::before{
     content: "";
     position: absolute;
-    top: -6.5rem;
-    bottom: 0;
+    top: -6.5rem; /* Adjust as needed */
+    bottom: 0; /* Adjust as needed */
+    left: 1rem; /* Adjust as needed */
     width: 100px; /* Adjust width as needed */
-    height: calc(100% + 10rem); /* Adjust height as needed */
+    height: calc(100% + 14rem); /* Adjust height as needed */
     background: url('https://res.cloudinary.com/dqoibnakh/image/upload/v1718706251/Branch_left_xhg9qf.png') no-repeat center;
     background-size: 80px ; /* Adjust size as needed */
     opacity: 1;
-    z-index: 1; /* Ensure the heading text is above the pseudo-elements */
+    z-index: 0; /* Ensure the heading text is above the pseudo-elements */
   }
 
   .home-heading::after{
@@ -209,21 +218,15 @@
     position: absolute;
     top: -6.5rem;
     bottom: 0;
+    right: 1rem; /* Adjust as needed */
     width: 100px; /* Adjust width as needed */
-    height: calc(100% + 10rem); /* Adjust height as needed */
+    height: calc(100% + 14rem); /* Adjust height as needed */
     background: url('https://res.cloudinary.com/dqoibnakh/image/upload/v1718706259/Branch_right_l7bljp.png') no-repeat center;
     background-size: 80px ; /* Adjust size as needed */
     opacity: 1;
-    z-index: 1; /* Ensure the heading text is above the pseudo-elements */
+    z-index: 0; /* Ensure the heading text is above the pseudo-elements */
   }
 
-  .home-heading::before {
-    left: 0;
-  }
-
-  .home-heading::after {
-    right: 0;
-  }
 }
 
 

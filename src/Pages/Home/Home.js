@@ -45,7 +45,7 @@ function Home() {
         />
         <div className="home-text">
           <h1 className="home-heading">
-            YOUR PERSONAL VEHICLE PROCUREMENT PARTNER
+            YOUR PERSONAL VEHICLE <span className="break-line">PROCUREMENT PARTNER</span>
           </h1>
           <p className="home-subheading">
             Simplifying the Journey<br></br>from Choice to Chassis
