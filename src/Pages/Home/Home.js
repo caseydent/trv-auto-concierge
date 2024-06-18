@@ -84,6 +84,13 @@ function Home() {
             dealer relationships ensure that your vehicle(s) are in optimal working condition.
             </p>
           </div>
+          <div className="info-content-additional">
+            <h2 className="info-title">DELIVERY</h2>
+            <p className="info-text">
+            At TRV Auto Concierge, we strive to provide timely and efficient delivery by leveraging 
+            our extensive network to source your desired vehicle from nearby locations.
+            </p>
+          </div>
         </div>
       </div>
       <div className="customer-showcase">
