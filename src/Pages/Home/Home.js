@@ -76,6 +76,21 @@ function Home() {
               ensures you get the best deal on your desired vehicle.
             </p>
           </div>
+          <div className="info-content-additional">
+            <h2 className="info-title">VEHICLE QUALITY ASSURANCE</h2>
+            <p className="info-text">
+            Ensuring your vehicle operates at peak performance is our top priority. 
+            At TRV Auto Concierge, our premier dealer management services and established 
+            dealer relationships ensure that your vehicle(s) are in optimal working condition.
+            </p>
+          </div>
+          <div className="info-content-additional">
+            <h2 className="info-title">DELIVERY</h2>
+            <p className="info-text">
+            At TRV Auto Concierge, we strive to provide timely and efficient delivery by leveraging 
+            our extensive network to source your desired vehicle from nearby locations.
+            </p>
+          </div>
         </div>
       </div>
       <div className="customer-showcase">
