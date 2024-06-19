@@ -1,13 +1,20 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [animatedElements, setAnimatedElements] = useState([]);
   const refs = useRef([]);
+  const [isCarousel, setIsCarousel] = useState(window.innerWidth >= 768);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsCarousel(window.innerWidth >= 768);
+    };
+
     const checkScroll = () => {
       if (window.scrollY > 200) {
         setShowScrollButton(true);
@@ -27,13 +34,44 @@ function Home() {
       });
     };
 
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", checkScroll);
-    return () => window.removeEventListener("scroll", checkScroll);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", checkScroll);
+    };
   }, [animatedElements]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const customerShowcaseItems = [
+    {
+      imgSrc: "https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg",
+      altText: "Jimmy Cornelius",
+      name: "Jimmy - 2023 Bayliner Element M17 Boat",
+      testimonial: "Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"
+    },
+    {
+      imgSrc: "https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg",
+      altText: "Christine Knatz",
+      name: "Christine - 2023 Yamaha Kodiak EPS 700 - Tactical Black",
+      testimonial: "The 4 wheeler exceeded my expectations. From the handling to terrain it's truly an amazing machine. I love how easy it is to start, maneuver due to power steering to the ease of going into reverse. I can now go into trails with steep incline and use my winch to remove trees in my way."
+    },
+    {
+      imgSrc: "https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png",
+      altText: "Danny Carr",
+      name: "Danny - 2022 Ford EcoSport S",
+      testimonial: "I am very happy with my EcoSport...At the dealership, I gave them my drivers license and insurance card, they gave me my Key! Easiest transaction ever"
+    },
+    {
+      imgSrc: "https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png",
+      altText: "Jimmy Cornelius",
+      name: "Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic S",
+      testimonial: "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
+    }
+  ];
 
   return (
     <div>
@@ -96,99 +134,35 @@ function Home() {
       
       <div className="customer-showcase">
         <h2 className="showcase-title">OUR HAPPY CUSTOMERS</h2>
-        <div className="image-container">
-          <div
-            ref={(el) => (refs.current[1] = el)}
-            className={`showcase-item ${
-              animatedElements.includes(1) ? "fade-in-final" : "fade-in-initial"
-            }`}
-          >
-            <div className="image-wrapper">
-              <img
-                src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169178/A30600050_nonwgc.jpg"
-                alt="Jimmy Cornelius"
-                className="full-width-image-cs"
-              />
+        {isCarousel ? (
+          <Carousel showThumbs={false} showStatus={false} infiniteLoop useKeyboardArrows autoPlay>
+            {customerShowcaseItems.map((item, index) => (
+              <div className="showcase-item" key={index}>
+                <div className="image-wrapper">
+                  <img src={item.imgSrc} alt={item.altText} className="full-width-image-cs" />
+                </div>
+                <h3 className="customer-name">{item.name}</h3>
+                <p className="customer-testimonial">"{item.testimonial}"</p>
+              </div>
+            ))}
+          </Carousel>
+        ) : (
+          customerShowcaseItems.map((item, index) => (
+            <div
+              ref={(el) => (refs.current[index + 1] = el)}
+              className={`showcase-item ${
+                animatedElements.includes(index + 1) ? "fade-in-final" : "fade-in-initial"
+              }`}
+              key={index}
+            >
+              <div className="image-wrapper">
+                <img src={item.imgSrc} alt={item.altText} className="full-width-image-cs" />
+              </div>
+              <h3 className="customer-name">{item.name}</h3>
+              <p className="customer-testimonial">"{item.testimonial}"</p>
             </div>
-            <h3 className="customer-name">
-              Jimmy - 2023 Bayliner Element M17 Boat
-            </h3>
-            <p className="customer-testimonial">
-              "Enjoying the Bayliner Element M17 on the water at Tampa Bay, FL"
-            </p>
-          </div>
-
-          <div
-            ref={(el) => (refs.current[2] = el)}
-            className={`showcase-item ${
-              animatedElements.includes(2) ? "fade-in-final" : "fade-in-initial"
-            }`}
-          >
-            <div className="image-wrapper">
-              <img
-                src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169607/A30688127_qmxpz1.jpg"
-                alt="Christine Knatz"
-                className="full-width-image-cs"
-              />
-            </div>
-            <h3 className="customer-name">
-              Christine - 2023 Yamaha Kodiak EPS 700 - Tactical Black
-            </h3>
-            <p className="customer-testimonial">
-              "The 4 wheeler exceeded my expectations. From the handling to
-              terrain it's truly an amazing machine. I love how easy it is to
-              start, maneuver due to power steering to the ease of going into
-              reverse. I can now go into trails with steep incline and use my
-              winch to remove trees in my way."
-            </p>
-          </div>
-
-          <div
-            ref={(el) => (refs.current[3] = el)}
-            className={`showcase-item ${
-              animatedElements.includes(3) ? "fade-in-final" : "fade-in-initial"
-            }`}
-          >
-            <div className="image-wrapper">
-              <img
-                src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698169935/Danny_fviind.png"
-                alt="Danny Carr"
-                className="full-width-image-cs"
-              />
-            </div>
-            <h3 className="customer-name">Danny - 2022 Ford EcoSport S</h3>
-            <p className="customer-testimonial">
-              "I am very happy with my EcoSport...At the dealership, I gave them
-              my drivers license and insurance card, they gave me my Key!
-              Easiest transaction ever"
-            </p>
-          </div>
-
-          <div
-            ref={(el) => (refs.current[4] = el)}
-            className={`showcase-item ${
-              animatedElements.includes(4) ? "fade-in-final" : "fade-in-initial"
-            }`}
-          >
-            <div className="image-wrapper">
-              <img
-                src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698170114/Jimmy_g4borv.png"
-                alt="Jimmy Cornelius"
-                className="full-width-image-cs"
-              />
-            </div>
-            <h3 className="customer-name">
-              Jimmy - 2023 Ford F-150 Lariat 4x4 5.0L V8 - Agate White Metallic
-              S
-            </h3>
-            <p className="customer-testimonial">
-              "A beautiful day in Tampa, FL with my Ford F-150 Lariat 4X4"
-            </p>
-          </div>
-
-          {/* Repeat this structure for the rest of the showcase items, incrementing the refs.current index for each item. */}
-        </div>
-
+          ))
+        )}
         <div className="cta-section">
           <h2>Ready to find your perfect vehicle?</h2>
           <p>Get started today!</p>
@@ -201,7 +175,6 @@ function Home() {
             </Link>
           </div>
         </div>
-
         {showScrollButton && (
           <button onClick={scrollToTop} className="scroll-to-top">
             <img
