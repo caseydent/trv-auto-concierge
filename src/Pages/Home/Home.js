@@ -67,32 +67,33 @@ function Home() {
             years in the industry, we're your trusted partner in procuring cars,
             recreational vehicles, boats, and motorcycles.
           </p>
-          <div className="info-content-additional">
-            <h2 className="info-title">WHAT WE PROCURE</h2>
-            <p className="info-text">
-              Your Dream Ride, Delivered: Whether you’re in the market for a
-              sleek new car, a fun recreational vehicle, a sturdy boat, or a
-              swift motorcycle, we've got you covered. Our extensive experience
-              ensures you get the best deal on your desired vehicle.
-            </p>
-          </div>
-          <div className="info-content-additional">
-            <h2 className="info-title">VEHICLE QUALITY ASSURANCE</h2>
-            <p className="info-text">
+        </div>
+        <div className="info-content">
+          <h2 className="info-title">WHAT WE PROCURE</h2>
+          <p className="info-text">
+            Your Dream Ride, Delivered: Whether you’re in the market for a
+            sleek new car, a fun recreational vehicle, a sturdy boat, or a
+            swift motorcycle, we've got you covered. Our extensive experience
+            ensures you get the best deal on your desired vehicle.
+          </p>
+        </div>
+        <div className="info-content">
+          <h2 className="info-title">VEHICLE QUALITY ASSURANCE</h2>
+          <p className="info-text">
             Ensuring your vehicle operates at peak performance is our top priority. 
             At TRV Auto Concierge, our premier dealer management services and established 
             dealer relationships ensure that your vehicle(s) are in optimal working condition.
-            </p>
-          </div>
-          <div className="info-content-additional">
-            <h2 className="info-title">DELIVERY</h2>
-            <p className="info-text">
+          </p>
+        </div>
+        <div className="info-content">
+          <h2 className="info-title">DELIVERY</h2>
+          <p className="info-text">
             At TRV Auto Concierge, we strive to provide timely and efficient delivery by leveraging 
             our extensive network to source your desired vehicle from nearby locations.
-            </p>
-          </div>
+          </p>
         </div>
       </div>
+      
       <div className="customer-showcase">
         <h2 className="showcase-title">OUR HAPPY CUSTOMERS</h2>
         <div className="image-container">

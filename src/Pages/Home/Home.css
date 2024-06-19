@@ -35,7 +35,7 @@
 /* Initial State */
 .fade-in-initial {
   opacity: 0; /* Start invisible */
-  transform: translateY(1rem); /* Start 1rem below their normal position */
+  transform: translateY(1.5rem); /* Start 1.5rem below their normal position */
   transition: opacity 10s, transform 10s; /* Smooth transition for opacity and position */
 }
 
@@ -46,15 +46,23 @@
   transition: opacity 1.5s, transform 1.5s;
 }
 
+/* Flexbox Containers */
 .info-section {
   padding-top: 5.31rem;
   padding-bottom: 5.31rem;
   background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column; /* Default to column layout */
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .info-content {
   width: 60%; /* Adjust this value to control the width of the column */
   margin: 0 auto; /* Center the container horizontally */
+  margin-bottom: 3rem;
+  
 }
 
 .info-title {
@@ -68,10 +76,6 @@
   line-height: 1.6rem; /* Adjust this value as needed */
   padding-left: 1.125rem; /* Visually align with title */
   color: #777;
-}
-
-.info-content-additional {
-  margin-top: 4rem; /* Adjust as needed */
 }
 
 .customer-showcase {
@@ -224,6 +228,17 @@
     transform: translateY(-50%);
     opacity: 1;
     z-index: 0; /* Ensure the pseudo-elements are behind the text */
+  }
+
+  .info-section {
+    flex-direction: row; /* Change to row layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-around; /* Distribute items with space around */
+  }
+
+  .info-content {
+    width: 45%; /* Adjust this value to control the width of each item */
+    margin: 1rem; /* Add spacing between items */
   }
 
 }
