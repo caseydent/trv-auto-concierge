@@ -62,7 +62,6 @@
   width: 60%; /* Adjust this value to control the width of the column */
   margin: 0 auto; /* Center the container horizontally */
   margin-bottom: 3rem;
-  
 }
 
 .info-title {
@@ -81,8 +80,6 @@
 .customer-showcase {
   padding-top: 5.31rem;
   background-color: #fff; /* Or any desired background color */
-  display: grid;
-  grid-template-columns: 1fr; /* Single column by default */
 }
 
 .showcase-title {
@@ -107,7 +104,7 @@
 }
 
 .showcase-item {
-  display: column;
+  display: flex;
   flex-direction: column; /* Stack items vertically */
   align-items: center;
   padding-bottom: 5.31rem; /* Adjust for spacing between items */
@@ -240,9 +237,4 @@
     width: 45%; /* Adjust this value to control the width of each item */
     margin: 1rem; /* Add spacing between items */
   }
-
 }
-
-
-
-
