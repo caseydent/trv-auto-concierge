@@ -23,13 +23,15 @@ function Home() {
       }
 
       refs.current.forEach((ref, index) => {
-        const rect = ref.getBoundingClientRect();
-        if (
-          rect.top <= window.innerHeight &&
-          rect.bottom >= 0 &&
-          !animatedElements.includes(index)
-        ) {
-          setAnimatedElements((prev) => [...prev, index]);
+        if (ref) { // Ensure ref is not null
+          const rect = ref.getBoundingClientRect();
+          if (
+            rect.top <= window.innerHeight &&
+            rect.bottom >= 0 &&
+            !animatedElements.includes(index)
+          ) {
+            setAnimatedElements((prev) => [...prev, index]);
+          }
         }
       });
     };
