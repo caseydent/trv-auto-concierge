@@ -325,3 +325,10 @@
     height: 450px;
   }
 }
+
+@media (min-width: 1195px) {
+  .home-section, .info-section, .customer-showcase, .cta-section {
+    width: 1195px;
+    margin: 0 auto;
+  }
+}
