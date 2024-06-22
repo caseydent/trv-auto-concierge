@@ -47,6 +47,8 @@
   padding-top: 5.31rem;
   padding-bottom: 2.5rem;
   background-color: #f7f7f7;
+  background-size: cover; /* Ensure background covers the entire width */
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,6 +122,9 @@
   padding-top: 5.31rem;
   padding-bottom: 5.31rem;
   color: #777;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: #f7f7f7;
 }
 
@@ -322,6 +327,34 @@
 
   .carousel .slide img.image-4 {
     width: 400px;
+    height: 450px;
+  }
+}
+
+@media (min-width: 1195px) {
+  .home-section, .customer-showcase{
+    width: 1195px;
+    margin: 0 auto;
+  }
+
+  .carousel .slide img.image-1 {
+    width: 600px;
+    height: 500px;
+    margin-bottom: 2rem;
+  }
+
+  .carousel .slide img.image-2 {
+    width: 600px;
+    height: 450px;
+  }
+
+  .carousel .slide img.image-3 {
+    width: 600px;
+    height: 400px;
+  }
+
+  .carousel .slide img.image-4 {
+    width: 600px;
     height: 450px;
   }
 }
