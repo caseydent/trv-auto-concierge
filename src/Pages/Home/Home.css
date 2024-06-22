@@ -5,62 +5,58 @@
 }
 
 .home-section {
-  padding-bottom: 2.5rem;
-  /* ... other styles ... */
+  padding-bottom: 5rem;
 }
 
 .home-text {
-  position: relative; /* Make this relative to position the images inside it */
-  text-align: center; /* Center the text */
-  margin-top: 8rem; /* Add some spacing between the image and the text */
+  position: relative;
+  text-align: center;
+  margin-top: 8rem;
 }
 
 .home-heading {
-  font-size: 1.4rem; /* Adjust as needed */
-  line-height: 2rem; /* Adjust this value as needed */
-  color: #777; /* Adjust as needed */
-  position: relative; /* Ensure the pseudo-elements are positioned correctly */
-  z-index: 1; /* Ensure the subheading text is above the pseudo-elements */
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #777;
+  position: relative;
+  z-index: 1;
 }
 
 .home-subheading {
-  font-size: 1.2rem; /* Adjust as needed */
-  line-height: 1.6rem; /* Adjust this value as needed */
-  color: #777; /* Adjust as needed */
-  margin-top: 1rem; /* Add some spacing between the heading and subheading */
-  position: relative; /* Ensure the pseudo-elements are positioned correctly */
-  z-index: 1; /* Ensure the heading text is above the pseudo-elements */
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #777;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
-/* Initial State */
 .fade-in-initial {
-  opacity: 0; /* Start invisible */
-  transform: translateY(1.5rem); /* Start 1.5rem below their normal position */
-  transition: opacity 10s, transform 10s; /* Smooth transition for opacity and position */
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 10s, transform 10s;
 }
 
-/* Final State - applied when the user has scrolled to the section */
 .fade-in-final {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Normal position */
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 1.5s, transform 1.5s;
 }
 
-/* Flexbox Containers */
 .info-section {
   padding-top: 5.31rem;
-  padding-bottom: 5.31rem;
+  padding-bottom: 2.5rem;
   background-color: #f7f7f7;
   display: flex;
-  flex-direction: column; /* Default to column layout */
+  flex-direction: column;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
 }
 
 .info-content {
-  width: 60%; /* Adjust this value to control the width of the column */
-  margin: 0 auto; /* Center the container horizontally */
+  width: 60%;
+  margin: 0 auto;
   margin-bottom: 3rem;
 }
 
@@ -70,21 +66,21 @@
 }
 
 .info-text {
-  text-align: left; /* Set text to start from the left */
-  margin: 0 auto; /* Center block elements */
-  line-height: 1.6rem; /* Adjust this value as needed */
-  padding-left: 1.125rem; /* Visually align with title */
+  text-align: left;
+  margin: 0 auto;
+  line-height: 1.6rem;
+  padding-left: 1.125rem;
   color: #777;
 }
 
 .customer-showcase {
   padding-top: 5.31rem;
-  background-color: #fff; /* Or any desired background color */
+  background-color: #fff;
 }
 
 .showcase-title {
   text-align: center;
-  margin-bottom: 2rem; /* Adjust as needed */
+  margin-bottom: 2rem;
   color: #777;
 }
 
@@ -98,32 +94,32 @@
 .full-width-image-cs {
   width: 100%;
   height: auto;
-  object-fit: contain; /* Ensures image is contained without being cropped */
+  object-fit: contain;
 }
 
 .showcase-item {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+  flex-direction: column;
   align-items: center;
-  padding-bottom: 5.31rem; /* Adjust for spacing between items */
+  padding-bottom: 5.31rem;
 }
 
 .customer-name {
   font-weight: normal;
   color: #777;
-  padding: 0 2rem; /* Adjust the padding value as needed */
+  padding: 0 2rem;
 }
 
 .customer-testimonial {
   font-style: italic;
   color: #777;
-  padding: 0 2rem; /* Adjust the padding value as needed */
+  padding: 0 2rem;
 }
 
 .cta-section {
   padding-top: 5.31rem;
   padding-bottom: 5.31rem;
-  color: #777; /* Setting the font color for the entire section */
+  color: #777;
   background-color: #f7f7f7;
 }
 
@@ -136,50 +132,50 @@
 }
 
 .cta-link:hover {
-  text-decoration: underline; /* Optional: Add underline on hover for better UX */
+  text-decoration: underline;
 }
 
 .scroll-to-top {
-  width: 4rem; /* Width of the button */
-  height: 4rem; /* Height of the button */
-  border-radius: 50%; /* Makes the button circular */
-  opacity: 0.5; /* Adjust as desired, 0 is fully transparent and 1 is fully opaque */
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  opacity: 0.5;
   background-image: url("https://res.cloudinary.com/dqoibnakh/image/upload/v1698237417/SeekPng.com_grey-png_2162589_irw3sb.png");
-  background-size: contain; /* Ensures the image scales correctly */
-  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
-  background-position: center; /* Centers the image within the button */
-  border: none; /* Removes any default borders */
-  position: fixed; /* Fixed position */
-  bottom: 1rem; /* Position from the bottom */
-  right: 0.5rem; /* Position from the right */
-  z-index: 1000; /* Ensures it appears above other content */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 0.5rem;
+  z-index: 1000;
 }
 
 @media only screen and (max-width: 380px) {
   .home-heading {
-    font-size: 1.15rem; /* Adjust as needed */
+    font-size: 1.15rem;
   }
 
   .home-subheading {
-    font-size: 1.1rem; /* Adjust as needed */
+    font-size: 1.1rem;
   }
 
   .info-title {
-    font-size: 1.4rem; /* Adjust as needed */
+    font-size: 1.4rem;
   }
 
   .info-content {
-    width: 70%; /* Adjust this value to control the width of the column */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 70%;
+    margin: 0 auto;
   }
 
   .showcase-title {
-    font-size: 1.4rem; /* Adjust as needed */
+    font-size: 1.4rem;
   }
 
   .cta-section h2 {
-    width: 70%; /* Adjust this value to control the width of the column */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
@@ -200,66 +196,132 @@
   .home-heading::before {
     content: "";
     position: absolute;
-    top: 90%; /* Adjust as needed to align with the text */
-    left: 3rem; /* Adjust as needed */
-    width: 5rem; /* Adjust width as needed */
-    height: 15rem; /* Adjust height as needed */
+    top: 90%;
+    left: 3rem;
+    width: 5rem;
+    height: 15rem;
     background: url("https://res.cloudinary.com/dqoibnakh/image/upload/v1718706251/Branch_left_xhg9qf.png")
       no-repeat center;
     background-size: contain;
     transform: translateY(-50%);
     opacity: 1;
-    z-index: 0; /* Ensure the pseudo-elements are behind the text */
+    z-index: 0;
   }
 
   .home-heading::after {
     content: "";
     position: absolute;
-    top: 90%; /* Adjust as needed to align with the text */
-    right: 3rem; /* Adjust as needed */
-    width: 5rem; /* Adjust width as needed */
-    height: 15rem; /* Adjust height as needed */
+    top: 90%;
+    right: 3rem;
+    width: 5rem;
+    height: 15rem;
     background: url("https://res.cloudinary.com/dqoibnakh/image/upload/v1718706259/Branch_right_l7bljp.png")
       no-repeat center;
     background-size: contain;
     transform: translateY(-50%);
     opacity: 1;
-    z-index: 0; /* Ensure the pseudo-elements are behind the text */
+    z-index: 0;
   }
 
   .info-section {
-    flex-direction: row; /* Change to row layout */
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: space-around; /* Distribute items with space around */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .info-content {
-    width: 45%; /* Adjust this value to control the width of each item */
-    margin: 1rem; /* Add spacing between items */
+    width: 45%;
+    margin: 1rem;
   }
 
-  .carousel .slide img {
-    width: 100%; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+  .carousel .slider-wrapper {
+    position: relative;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .full-width-image-cs {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .arrow {
+    background-color: #777(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #777;
+    z-index: 1000;
+  }
+  
+  .arrow.prev {
+    left: 2rem; /* Adjust as needed to position the arrow a fixed distance from the image */
+  }
+  
+  .arrow.next {
+    right: 2rem; /* Adjust as needed to position the arrow a fixed distance from the image */
+  }
+
+  .showcase-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .customer-name {
+    font-weight: bold;
+    color: #777;
+    text-align: center;
+    max-width: 80%;
+    margin-top: 1rem;
+  }
+
+  .customer-testimonial {
+    font-style: italic;
+    color: #777;
+    text-align: center;
+    max-width: 80%;
+    margin: 0.5rem auto 2rem;
   }
 
   .carousel .slide img.image-1 {
-    width: 600px; /* Specific width for image 1 */
-    height: 400px; /* Specific height for image 1 */
+    width: 600px;
+    height: 400px;
+    margin-bottom: 2rem;
   }
 
   .carousel .slide img.image-2 {
-    width: 400px; /* Specific width for image 2 */
-    height: 350px; /* Specific height for image 2 */
+    width: 400px;
+    height: 350px;
   }
 
   .carousel .slide img.image-3 {
-    width: 400px; /* Specific width for image 3 */
-    height: 400px; /* Specific height for image 3 */
+    width: 400px;
+    height: 400px;
   }
 
   .carousel .slide img.image-4 {
-    width: 400px; /* Specific width for image 4 */
-    height: 450px; /* Specific height for image 4 */
+    width: 400px;
+    height: 450px;
   }
 }

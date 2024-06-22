@@ -87,84 +87,131 @@ function Home() {
     },
   ];
 
-  return (
-    <div>
-      <div className="home-section">
-        <img
-          src="https://res.cloudinary.com/dqoibnakh/image/upload/v1697653393/ghscei35o2lourbtubg6.jpg"
-          alt="Landrover"
-          className="full-width-image"
-        />
-        <div className="home-text">
-          <h1 className="home-heading">
-            YOUR PERSONAL VEHICLE{" "}
-            <span className="break-line">PROCUREMENT PARTNER</span>
-          </h1>
-          <p className="home-subheading">
-            Simplifying the Journey<br></br>from Choice to Chassis
-          </p>
-        </div>
-      </div>
-
-      <div
-        ref={(el) => (refs.current[0] = el)}
-        className={`info-section ${
-          animatedElements.includes(0) ? "fade-in-final" : "fade-in-initial"
-        }`}
+  const renderArrowPrev = (onClickHandler, hasPrev, label) =>
+    hasPrev && (
+      <button
+        type="button"
+        onClick={onClickHandler}
+        title={label}
+        className="arrow prev"
       >
-        <div className="info-content">
-          <h2 className="info-title">WHAT WE DO</h2>
-          <p className="info-text">
-            At TRV Auto Concierge, we specialize in sourcing and delivering a
-            wide range of vehicles tailored to your preferences. With over five
-            years in the industry, we're your trusted partner in procuring cars,
-            recreational vehicles, boats, and motorcycles.
-          </p>
-        </div>
-        <div className="info-content">
-          <h2 className="info-title">WHAT WE PROCURE</h2>
-          <p className="info-text">
-            Your Dream Ride, Delivered: Whether you’re in the market for a sleek
-            new car, a fun recreational vehicle, a sturdy boat, or a swift
-            motorcycle, we've got you covered. Our extensive experience ensures
-            you get the best deal on your desired vehicle.
-          </p>
-        </div>
-        <div className="info-content">
-          <h2 className="info-title">VEHICLE QUALITY ASSURANCE</h2>
-          <p className="info-text">
-            Ensuring your vehicle operates at peak performance is our top
-            priority. At TRV Auto Concierge, our premier dealer management
-            services and established dealer relationships ensure that your
-            vehicle(s) are in optimal working condition.
-          </p>
-        </div>
-        <div className="info-content">
-          <h2 className="info-title">DELIVERY</h2>
-          <p className="info-text">
-            At TRV Auto Concierge, we strive to provide timely and efficient
-            delivery by leveraging our extensive network to source your desired
-            vehicle from nearby locations.
-          </p>
-        </div>
-      </div>
+        &lt;
+      </button>
+    );
 
-      <div className="customer-showcase">
-        <h2 className="showcase-title">OUR HAPPY CUSTOMERS</h2>
-        {isCarousel ? (
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            infiniteLoop
-            useKeyboardArrows
-            autoPlay
-            centerMode
-            centerSlidePercentage={
-              80
-            } /* Adjust percentage to control the size of the images relative to the carousel container */
-          >
-            {customerShowcaseItems.map((item, index) => (
-              <div className="showcase-item" key={index}>
+  const renderArrowNext = (onClickHandler, hasNext, label) =>
+    hasNext && (
+      <button
+        type="button"
+        onClick={onClickHandler}
+        title={label}
+        className="arrow next"
+      >
+        &gt;
+      </button>
+    );
+
+    return (
+      <div>
+        <div className="home-section">
+          <img
+            src="https://res.cloudinary.com/dqoibnakh/image/upload/v1697653393/ghscei35o2lourbtubg6.jpg"
+            alt="Landrover"
+            className="full-width-image"
+          />
+          <div className="home-text">
+            <h1 className="home-heading">
+              YOUR PERSONAL VEHICLE{" "}
+              <span className="break-line">PROCUREMENT PARTNER</span>
+            </h1>
+            <p className="home-subheading">
+              Simplifying the Journey<br></br>from Choice to Chassis
+            </p>
+          </div>
+        </div>
+  
+        <div
+          ref={(el) => (refs.current[0] = el)}
+          className={`info-section ${
+            animatedElements.includes(0) ? "fade-in-final" : "fade-in-initial"
+          }`}
+        >
+          <div className="info-content">
+            <h2 className="info-title">WHAT WE DO</h2>
+            <p className="info-text">
+              At TRV Auto Concierge, we specialize in sourcing and delivering a
+              wide range of vehicles tailored to your preferences. With over five
+              years in the industry, we're your trusted partner in procuring cars,
+              recreational vehicles, boats, and motorcycles.
+            </p>
+          </div>
+          <div className="info-content">
+            <h2 className="info-title">WHAT WE PROCURE</h2>
+            <p className="info-text">
+              Your Dream Ride, Delivered: Whether you’re in the market for a sleek
+              new car, a fun recreational vehicle, a sturdy boat, or a swift
+              motorcycle, we've got you covered. Our extensive experience ensures
+              you get the best deal on your desired vehicle.
+            </p>
+          </div>
+          <div className="info-content">
+            <h2 className="info-title">VEHICLE QUALITY ASSURANCE</h2>
+            <p className="info-text">
+              Ensuring your vehicle operates at peak performance is our top
+              priority. At TRV Auto Concierge, our premier dealer management
+              services and established dealer relationships ensure that your
+              vehicle(s) are in optimal working condition.
+            </p>
+          </div>
+          <div className="info-content">
+            <h2 className="info-title">DELIVERY</h2>
+            <p className="info-text">
+              At TRV Auto Concierge, we strive to provide timely and efficient
+              delivery by leveraging our extensive network to source your desired
+              vehicle from nearby locations.
+            </p>
+          </div>
+        </div>
+  
+        <div className="customer-showcase">
+          <h2 className="showcase-title">OUR HAPPY CUSTOMERS</h2>
+          {isCarousel ? (
+            <Carousel
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop
+              useKeyboardArrows
+              autoPlay
+              centerMode
+              centerSlidePercentage={80}
+              renderArrowPrev={renderArrowPrev}
+              renderArrowNext={renderArrowNext}
+            >
+              {customerShowcaseItems.map((item, index) => (
+                <div className="showcase-item" key={index}>
+                  <div className="image-wrapper">
+                    <img
+                      src={item.imgSrc}
+                      alt={item.altText}
+                      className={`full-width-image-cs ${item.className}`}
+                    />
+                  </div>
+                  <h3 className="customer-name">{item.name}</h3>
+                  <p className="customer-testimonial">"{item.testimonial}"</p>
+                </div>
+              ))}
+            </Carousel>
+          ) : (
+            customerShowcaseItems.map((item, index) => (
+              <div
+                ref={(el) => (refs.current[index + 1] = el)}
+                className={`showcase-item ${
+                  animatedElements.includes(index + 1)
+                    ? "fade-in-final"
+                    : "fade-in-initial"
+                }`}
+                key={index}
+              >
                 <div className="image-wrapper">
                   <img
                     src={item.imgSrc}
@@ -175,54 +222,31 @@ function Home() {
                 <h3 className="customer-name">{item.name}</h3>
                 <p className="customer-testimonial">"{item.testimonial}"</p>
               </div>
-            ))}
-          </Carousel>
-        ) : (
-          customerShowcaseItems.map((item, index) => (
-            <div
-              ref={(el) => (refs.current[index + 1] = el)}
-              className={`showcase-item ${
-                animatedElements.includes(index + 1)
-                  ? "fade-in-final"
-                  : "fade-in-initial"
-              }`}
-              key={index}
-            >
-              <div className="image-wrapper">
-                <img
-                  src={item.imgSrc}
-                  alt={item.altText}
-                  className={`full-width-image-cs ${item.className}`}
-                />
-              </div>
-              <h3 className="customer-name">{item.name}</h3>
-              <p className="customer-testimonial">"{item.testimonial}"</p>
+            ))
+          )}
+          <div className="cta-section">
+            <h2>Ready to find your perfect vehicle?</h2>
+            <p>Get started today!</p>
+            <div className="cta-links">
+              <Link to="/services" className="cta-link">
+                Services
+              </Link>
+              <Link to="/howitworks" className="cta-link">
+                How It Works
+              </Link>
             </div>
-          ))
-        )}
-        <div className="cta-section">
-          <h2>Ready to find your perfect vehicle?</h2>
-          <p>Get started today!</p>
-          <div className="cta-links">
-            <Link to="/services" className="cta-link">
-              Services
-            </Link>
-            <Link to="/howitworks" className="cta-link">
-              How It Works
-            </Link>
           </div>
+          {showScrollButton && (
+            <button onClick={scrollToTop} className="scroll-to-top">
+              <img
+                src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698237417/SeekPng.com_grey-png_2162589_irw3sb.png"
+                alt="Scroll to top"
+              />
+            </button>
+          )}
         </div>
-        {showScrollButton && (
-          <button onClick={scrollToTop} className="scroll-to-top">
-            <img
-              src="https://res.cloudinary.com/dqoibnakh/image/upload/v1698237417/SeekPng.com_grey-png_2162589_irw3sb.png"
-              alt="Scroll to top"
-            />
-          </button>
-        )}
       </div>
-    </div>
-  );
-}
-
-export default Home;
+    );
+  }
+  
+  export default Home;
