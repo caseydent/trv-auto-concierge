@@ -14,6 +14,14 @@
   margin-top: 8rem;
 }
 
+.home-heading-container {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Ensure content is in a column layout */
+  justify-content: center;
+  align-items: center;
+}
+
 .home-heading {
   font-size: 1.4rem;
   line-height: 2rem;
@@ -186,8 +194,14 @@
 
 @media (min-width: 768px) {
   .home-heading {
-    font-size: 1.3rem;
-  }
+    position: relative;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #777;
+    padding: 0;
+    z-index: 1;
+}
 
   .home-heading .break-line::before {
     content: "\A";
@@ -198,40 +212,38 @@
     position: relative;
   }
 
-  .home-heading::before {
-    content: "";
-    position: absolute;
-    top: 90%;
-    left: 3rem;
-    width: 5rem;
-    height: 15rem;
-    background: url("https://res.cloudinary.com/dqoibnakh/image/upload/v1718706251/Branch_left_xhg9qf.png")
-      no-repeat center;
-    background-size: contain;
-    transform: translateY(-50%);
-    opacity: 1;
-    z-index: 0;
+  .home-heading {
+    position: relative;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #777;
+    z-index: 1;
   }
 
+  .home-heading::before,
   .home-heading::after {
     content: "";
     position: absolute;
-    top: 90%;
-    right: 3rem;
-    width: 5rem;
-    height: 15rem;
-    background: url("https://res.cloudinary.com/dqoibnakh/image/upload/v1718706259/Branch_right_l7bljp.png")
-      no-repeat center;
-    background-size: contain;
-    transform: translateY(-50%);
+    width: 5rem; /* Fixed width */
+    height: 15rem; /* Fixed height */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat;
     opacity: 1;
     z-index: 0;
   }
 
-  .info-section {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  .home-heading::before {
+    top: 100%; /* Adjust as needed */
+    left: -12rem; /* Adjust as needed */
+    transform: translateY(-50%); /* Center vertically relative to top */
+    background-image: url("https://res.cloudinary.com/dqoibnakh/image/upload/v1718706251/Branch_left_xhg9qf.png");
+  }
+
+  .home-heading::after {
+    top: 100%; /* Adjust as needed */
+    right: -12rem; /* Adjust as needed */
+    transform: translateY(-50%); /* Center vertically relative to top */
+    background-image: url("https://res.cloudinary.com/dqoibnakh/image/upload/v1718706259/Branch_right_l7bljp.png");
   }
 
   .info-content {
