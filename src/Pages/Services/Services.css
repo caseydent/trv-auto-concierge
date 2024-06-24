@@ -22,6 +22,9 @@
     text-align: center;
     font-size: 2.5rem;
     color: #333;
+    margin-top: 1.675rem; /* Add top margin to match howitworks-title */
+    font-weight: bold; /* Ensure the title is bold */
+    font-family: inherit; /* Ensure consistent font family */
     margin-bottom: 2rem;
     position: relative; /* For proper stacking context */
     z-index: 2; /* Ensure the title is above other content */
@@ -32,59 +35,37 @@
     background-position: center; /* Center the background image */
 }
 
-.steps {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.step {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.step-title {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.step-title .step-image {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 0.5rem;
-    object-fit: contain;
-}
-
-.step-title .step-image-sourcing {
-    margin-right: 0.58rem;
-}
-
-.step-title .step-image-finalisation {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 0.6rem;
-}
-
-.step-description {
+.services-description {
     font-size: 1rem;
     color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.services-description h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.services-description p {
+    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
-    .steps {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    .services-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
+}
 
-    .step {
-        width: 45%;
+@media (max-width: 768px) {
+    .services-title {
+        width: 100vw; /* Make sure the title spans the entire viewport width */
+        margin-left: calc(-50vw + 50%); /* Adjust to center the full-width title */
+        padding: 0 1rem;
     }
 }
 
