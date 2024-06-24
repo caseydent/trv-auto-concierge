@@ -127,6 +127,7 @@
 .menu-container.show {
   display: block;
   opacity: 1;
+  z-index: 9; /* Ensure it stays on top when shown */
   /* Transition or other styles for the visible state */
 }
 
@@ -145,6 +146,7 @@
 .icon-burger.active + .menu-container {
   display: block; /* Show the menu */
   opacity: 1; /* Fade in to full opacity */
+  z-index: 9; /* Ensure it stays on top when shown */
 }
 
 @media only screen and (max-width: 380px) {

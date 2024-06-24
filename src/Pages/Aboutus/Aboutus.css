@@ -11,24 +11,25 @@
     max-width: 1195px;
     margin: 0 auto;
     padding: 0 1rem;
-    position: relative;
-    z-index: 1;
+    position: relative; /* Ensure positioned children are relative to this */
+    z-index: 1; /* Ensure the content is above other elements */
 }
 
 .aboutus-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Enables Flexbox layout */
+    align-items: center; /* Vertically centers the text */
+    justify-content: center; /* Horizontally centers the text */
     text-align: center;
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 2rem;
-    position: relative;
-    z-index: 2;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
-    background-size: cover;
-    background-position: center;
+    position: relative; /* For proper stacking context */
+    z-index: 2; /* Ensure the title is above other content */
+    height: 100px; /* Set the height of the container */
+    background-color: rgba(255, 255, 255, 0.8); /* Ensure text readability with a semi-transparent background */
+    background-image: url('https://res.cloudinary.com/dqoibnakh/image/upload/v1719095127/Banner_ogye1w.png');
+    background-size: cover; /* Ensure the background image covers the entire title area */
+    background-position: center; /* Center the background image */
 }
 
 .aboutus-description {
@@ -52,8 +53,15 @@
     .aboutus-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutus-title {
+        width: 100vw; /* Make sure the title spans the entire viewport width */
+        margin-left: calc(-50vw + 50%); /* Adjust to center the full-width title */
+        padding: 0 1rem;
     }
 }
 
