@@ -70,13 +70,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* Center items horizontally */
     width: 45%; /* Set the container width */
 }
 
 /* Styles for the social media logos */
 .social-media-logo {
-    width: 40px; /* Set the logo width */
+    width: 80px; /* Set the logo width */
     height: auto;
     margin-bottom: 1rem; /* Add space between logos */
 }
@@ -99,7 +99,7 @@
 /* Styles for form inputs and textarea */
 .form-group input,
 .form-group textarea {
-    width: 100%; /* Ensure inputs don't overflow */
+    width: 60%; /* Ensure inputs don't overflow */
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -111,12 +111,16 @@
 .form-group input[type="email"],
 .form-group textarea {
     display: block;
-    width: 100%; /* Decrease the width of the form fields */
+    width: 60%; /* Ensure full width within form group */
     padding: 0.5rem;
     font-size: 1rem;
     color: #333;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.form-group textarea#message {
+    width: 100%; /* Increase the width of the "Your Message" textarea */
 }
 
 /* Styles for the submit button */
