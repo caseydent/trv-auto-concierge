@@ -35,23 +35,6 @@
     background-position: center; /* Center the background image */
 }
 
-/* Styles for the contact title */
-.contact-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 1; /* Ensure the title has a lower z-index */
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
-    background-size: cover;
-    background-position: center;
-}
-
 /* Styles for the subtitle below the contact title */
 .contact-subtitle {
     text-align: center;
