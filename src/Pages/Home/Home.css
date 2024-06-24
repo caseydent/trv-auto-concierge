@@ -349,6 +349,15 @@
     margin: 0 auto;
   }
 
+  .full-width-image {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out, brightness 0.5s ease-in-out, saturate 0.5s ease-in-out;
+  }
+
+  .full-width-image:hover {
+    filter: grayscale(0%) brightness(1.2) saturate(1.5);
+  }
+
   .carousel .slide img.image-1 {
     width: 600px;
     height: 500px;
