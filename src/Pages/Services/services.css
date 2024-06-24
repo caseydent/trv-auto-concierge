@@ -1,0 +1,95 @@
+.services-section {
+    padding: 5rem 1rem;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.services-content {
+    width: 100%;
+    max-width: 1195px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.services-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-size: cover;
+    background-position: center;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-title .step-image {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    object-fit: contain;
+}
+
+.step-title .step-image-sourcing {
+    margin-right: 0.58rem;
+}
+
+.step-title .step-image-finalisation {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.6rem;
+}
+
+.step-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (min-width: 768px) {
+    .steps {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .step {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1195px) {
+    .services-section {
+        width: 1195px;
+        margin: 0 auto;
+    }
+}
