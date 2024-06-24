@@ -164,4 +164,47 @@
     .social-media-container {
         display: none; /* Hide the social media logos on smaller screens */
     }
+
+    .form-container {
+        display: flex;
+        justify-content: center; /* Center the form container */
+    }
+
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the content */
+    }
+
+    .contact-form {
+        width: 50%; /* Adjust the width of the form */
+        text-align: center; /* Center the text inside the form */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the form */
+    }
+
+    .form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align form groups */
+    }
+
+    .form-group label,
+    .form-group input,
+    .form-group textarea {
+        width: 80%; /* Make sure the input fields and labels take a reduced width */
+        max-width: 80%; /* Ensure they do not overflow */
+        text-align: left; /* Align text inside inputs and labels to the left */
+    }
+
+    .form-group label {
+        text-align: center; /* Center align the labels */
+    }
+
+    .contact-button {
+        width: auto; /* Ensure the button width is natural */
+        align-self: center; /* Center align the button */
+    }
 }
