@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer"
 import Home from "./Pages/Home/Home";
-import HowItWorks from "./Pages/Howitworks/Howitworks";
+import Howitworks from "./Pages/Howitworks/Howitworks";
 import Services from "./Pages/Services/Services";
 import AboutUs from "./Pages/Aboutus/Aboutus";
 import Contact from "./Pages/Contact/Contact";
@@ -20,7 +20,7 @@ function App() {
         {/* Routing logic starts here */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/howitworks" element={<HowItWorks />} />
+          <Route path="/howitworks" element={<Howitworks />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
