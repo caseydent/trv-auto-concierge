@@ -76,6 +76,16 @@
     color: #555;
 }
 
+.howitworks-bottom-image {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.howitworks-bottom-image img {
+    max-width: 100%;
+    height: auto;
+}
+
 @media (min-width: 768px) {
     .steps {
         flex-direction: row;
