@@ -19,10 +19,10 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs.send(
-            'YOUR_SERVICE_ID', 
-            'YOUR_TEMPLATE_ID', 
-            formData, 
-            'YOUR_USER_ID'
+            'YOUR_SERVICE_ID',    // Replace with your EmailJS service ID
+            'YOUR_TEMPLATE_ID',   // Replace with your EmailJS template ID
+            formData,             // Form data to be sent
+            'YOUR_USER_ID'        // Replace with your EmailJS user ID
         )
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
@@ -47,25 +47,27 @@ const Contact = () => {
             <div className="contact-content">
                 <h1 className="contact-title">Contact Us</h1>
                 <p className="contact-subtitle">Do you need more information? Contact Trifecta here! Or you can reach us at <a href="mailto:info@trifecta.vc">info@trifecta.vc</a></p>
-                <form className="contact-form" onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label htmlFor="name">Your Name (required)</label>
-                        <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="company">Company Name (required)</label>
-                        <input type="text" id="company" name="company" required value={formData.company} onChange={handleChange} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">Your Email (required)</label>
-                        <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">Your Message</label>
-                        <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange}></textarea>
-                    </div>
-                    <button type="submit" className="contact-button">Send</button>
-                </form>
+                <div className="form-container">
+                    <form className="contact-form" onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label htmlFor="name">Your Name (required)</label>
+                            <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="company">Company Name (required)</label>
+                            <input type="text" id="company" name="company" required value={formData.company} onChange={handleChange} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Your Email (required)</label>
+                            <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="message">Your Message</label>
+                            <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange}></textarea>
+                        </div>
+                        <button type="submit" className="contact-button">Send</button>
+                    </form>
+                </div>
             </div>
         </div>
     );
