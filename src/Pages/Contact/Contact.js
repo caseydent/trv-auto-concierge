@@ -19,10 +19,10 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs.send(
-            'YOUR_SERVICE_ID',    // Replace with EmailJS service ID
-            'YOUR_TEMPLATE_ID',   // Replace with EmailJS template ID
+            'YOUR_SERVICE_ID',    // Replace with your EmailJS service ID
+            'YOUR_TEMPLATE_ID',   // Replace with your EmailJS template ID
             formData,             // Form data to be sent
-            'YOUR_USER_ID'        // Replace with EmailJS user ID
+            'YOUR_USER_ID'        // Replace with your EmailJS user ID
         )
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
@@ -67,6 +67,17 @@ const Contact = () => {
                         </div>
                         <button type="submit" className="contact-button">Send</button>
                     </form>
+                    <div className="social-media-container">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                            <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1719252631/Facebook_yfxop3.png" alt="Facebook" className="social-media-logo" />
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                            <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1719252545/X_Twitter_m4kbsj.png" alt="Twitter" className="social-media-logo" />
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1719251960/Linkedin_africe.png" alt="LinkedIn" className="social-media-logo" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
