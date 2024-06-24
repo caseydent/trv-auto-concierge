@@ -35,6 +35,9 @@ const Howitworks = () => {
                         <p className="step-description">Your vehicle is delivered to your doorstep, ready for you to enjoy.</p>
                     </div>
                 </div>
+                <div className="howitworks-bottom-image">
+                    <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1719218541/Cadillac_mjkcw9.png" alt="Cadillac 2024" />
+                </div>
             </div>
         </div>
     );
