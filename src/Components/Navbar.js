@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
             <div className={`menu-container${isMenuVisible ? ' show' : ''}`}>
                 <NavLink to="/" exact className="menu-item" activeClassName="active" onClick={toggleMenu}>Home</NavLink>
-                <NavLink to="/how-it-works" className="menu-item" activeClassName="active" onClick={toggleMenu}>How It Works</NavLink>
+                <NavLink to="/howitworks" className="menu-item" activeClassName="active" onClick={toggleMenu}>How It Works</NavLink>
                 <NavLink to="/services" className="menu-item" activeClassName="active" onClick={toggleMenu}>Services</NavLink>
                 <NavLink to="/about-us" className="menu-item" activeClassName="active" onClick={toggleMenu}>About Us</NavLink>
                 <NavLink to="/contact" className="menu-item" activeClassName="active" onClick={toggleMenu}>Contact</NavLink>
