@@ -1,3 +1,4 @@
+/* Styles for the contact section container */
 .contact-section {
     padding: 5rem 1rem;
     background-color: #f7f7f7;
@@ -6,15 +7,17 @@
     overflow: hidden;
 }
 
+/* Styles for the main content within the contact section */
 .contact-content {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px; /* Increase max-width */
     margin: 0 auto;
     padding: 0 1rem;
     position: relative;
     z-index: 1;
 }
 
+/* Styles for the contact title */
 .contact-title {
     display: flex;
     align-items: center;
@@ -31,6 +34,7 @@
     background-position: center;
 }
 
+/* Styles for the subtitle below the contact title */
 .contact-subtitle {
     text-align: center;
     font-size: 1rem;
@@ -43,36 +47,65 @@
     text-decoration: none;
 }
 
+/* Container for the form */
+.form-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%; /* Make the form container wider */
+}
+
+/* Styles for the contact form */
 .contact-form {
     background-color: #fff;
     padding: 2rem;
+    width: 50%; /* Set the form width to half of the container */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles for each form group */
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Increased margin for better spacing */
 }
 
+/* Styles for form labels */
 .form-group label {
     display: block;
     font-size: 1rem;
     color: #333;
     margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
+/* Styles for form inputs and textarea */
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.5rem;
+    max-width: 100%; /* Ensure inputs don't overflow */
+    padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
     box-sizing: border-box;
 }
 
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styles for the submit button */
 .contact-button {
-    display: inline-block;
+    display: inline-block; /* Ensure button spans full width */
+    width: 100%;
     background-color: #40d4fc;
     color: #fff;
     padding: 0.75rem 1.5rem;
@@ -80,23 +113,35 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
     background-color: #1aabcf;
 }
 
+/* Responsive adjustments for tablets and larger screens */
 @media (min-width: 768px) {
     .contact-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Align items to the center */
+    }
+
+    .contact-form {
+        width: 50%; /* Keep the form width to half */
     }
 }
 
+/* Responsive adjustments for larger screens */
 @media (min-width: 1195px) {
     .contact-section {
         width: 1195px;
         margin: 0 auto;
+    }
+
+    .contact-form {
+        width: 50%; /* Ensure form width adjusts to parent */
     }
 }
