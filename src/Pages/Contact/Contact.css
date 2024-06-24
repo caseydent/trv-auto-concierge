@@ -1,0 +1,210 @@
+/* Styles for the contact section container */
+.contact-section {
+    text-align: left; /* Override the inherited center alignment */
+    padding: 5rem 1rem;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Styles for the main content within the contact section */
+.contact-content {
+    width: 100%;
+    max-width: 1200px; /* Increase max-width */
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-title {
+    display: flex; /* Enables Flexbox layout */
+    align-items: center; /* Vertically centers the text */
+    justify-content: center; /* Horizontally centers the text */
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative; /* For proper stacking context */
+    z-index: 2; /* Ensure the title is above other content */
+    height: 100px; /* Set the height of the container */
+    background-color: rgba(255, 255, 255, 0.8); /* Ensure text readability with a semi-transparent background */
+    background-image: url('https://res.cloudinary.com/dqoibnakh/image/upload/v1719095127/Banner_ogye1w.png');
+    background-size: cover; /* Ensure the background image covers the entire title area */
+    background-position: center; /* Center the background image */
+}
+
+/* Styles for the contact title */
+.contact-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styles for the subtitle below the contact title */
+.contact-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.contact-subtitle a {
+    color: #40d4fc;
+    text-decoration: none;
+}
+
+/* Container for the form and social media logos */
+.form-container {
+    display: flex;
+    justify-content: space-between; /* Ensure space between form and logos */
+    width: 100%;
+    max-width: 100%; /* Make the form container wider */
+}
+
+/* Styles for the contact form */
+.contact-form {
+    background-color: #fff;
+    padding: 2rem;
+    width: 50%; /* Set the form width to half of the container */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the social media container */
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    width: 45%; /* Set the container width */
+}
+
+/* Styles for the social media logos */
+.social-media-logo {
+    width: 80px; /* Set the logo width */
+    height: auto;
+    margin-bottom: 1rem; /* Add space between logos */
+}
+
+/* Styles for each form group */
+.form-group {
+    margin-bottom: 1.5rem; /* Increased margin for better spacing */
+}
+
+/* Styles for form labels */
+.form-group label {
+    display: inline-block; /* Align labels with input fields */
+    font-size: 1rem;
+    text-align: left;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Styles for form inputs and textarea */
+.form-group input,
+.form-group textarea {
+    width: 60%; /* Ensure inputs don't overflow */
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    display: block;
+    width: 60%; /* Ensure full width within form group */
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea#message {
+    width: 100%; /* Increase the width of the "Your Message" textarea */
+}
+
+/* Styles for the submit button */
+.contact-button {
+    display: inline-block; /* Ensure button spans full width */
+    width: auto; /* Set width to auto for natural sizing */
+    background-color: #40d4fc;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #1aabcf;
+}
+
+/* Responsive adjustments for tablets and larger screens */
+@media (max-width: 768px) {
+    .social-media-container {
+        display: none; /* Hide the social media logos on smaller screens */
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center; /* Center the form container */
+    }
+
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the content */
+    }
+
+    .contact-form {
+        width: 50%; /* Adjust the width of the form */
+        text-align: center; /* Center the text inside the form */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the form */
+    }
+
+    .form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align form groups */
+    }
+
+    .form-group label,
+    .form-group input,
+    .form-group textarea {
+        width: 80%; /* Make sure the input fields and labels take a reduced width */
+        max-width: 80%; /* Ensure they do not overflow */
+        text-align: left; /* Align text inside inputs and labels to the left */
+    }
+
+    .form-group label {
+        text-align: center; /* Center align the labels */
+    }
+
+    .contact-button {
+        width: auto; /* Ensure the button width is natural */
+        align-self: center; /* Center align the button */
+    }
+}

@@ -1,0 +1,106 @@
+.howitworks-section {
+    padding: 5rem 1rem;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.howitworks-content {
+    width: 100%;
+    max-width: 1195px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative; /* Ensure positioned children are relative to this */
+    z-index: 1; /* Ensure the content is above other elements */
+}
+
+.howitworks-title {
+    display: flex; /* Enables Flexbox layout */
+    align-items: center; /* Vertically centers the text */
+    justify-content: center; /* Horizontally centers the text */
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative; /* For proper stacking context */
+    z-index: 2; /* Ensure the title is above other content */
+    height: 100px; /* Set the height of the container */
+    background-color: rgba(255, 255, 255, 0.8); /* Ensure text readability with a semi-transparent background */
+    background-image: url('https://res.cloudinary.com/dqoibnakh/image/upload/v1719095127/Banner_ogye1w.png');
+    background-size: cover; /* Ensure the background image covers the entire title area */
+    background-position: center; /* Center the background image */
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center; /* Vertically centers the image and text */
+    justify-content: center; /* Horizontally centers the image and text */
+}
+
+.step-title .step-image {
+    width: 1.5rem; /* Adjust as needed */
+    height: 1.5rem; /* Adjust as needed */
+    margin-right: 0.5rem; /* Space between the image and the text */
+    object-fit: contain; /* Ensure the image fits within the container */
+}
+
+.step-title .step-image-sourcing {
+    margin-right: 0.58rem; /* Increased space for the sourcing image */
+}
+
+.step-title .step-image-finalisation {
+    width: 2rem; /* Make the image bigger */
+    height: 2rem; /* Make the image bigger */
+    margin-right: 0.6rem; /* Increased space for the finalisation image */
+}
+
+.step-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+.howitworks-bottom-image {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.howitworks-bottom-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .steps {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .step {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1195px) {
+    .howitworks-section {
+        width: 1195px;
+        margin: 0 auto;
+    }
+}
