@@ -35,23 +35,6 @@
     background-position: center; /* Center the background image */
 }
 
-/* Styles for the contact title */
-.contact-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 2;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
-    background-size: cover;
-    background-position: center;
-}
-
 /* Styles for the subtitle below the contact title */
 .contact-subtitle {
     text-align: center;
@@ -161,6 +144,12 @@
 
 /* Responsive adjustments for tablets and larger screens */
 @media (max-width: 768px) {
+    .contact-title {
+        width: 100vw; /* Make sure the title spans the entire viewport width */
+        margin-left: calc(-50vw + 50%); /* Adjust to center the full-width title */
+        padding: 0 1rem;
+    }
+    
     .social-media-container {
         display: none; /* Hide the social media logos on smaller screens */
     }
@@ -177,7 +166,7 @@
     }
 
     .contact-form {
-        width: 50%; /* Adjust the width of the form */
+        width: 80%; /* Adjust the width of the form */
         text-align: center; /* Center the text inside the form */
         display: flex;
         flex-direction: column;
