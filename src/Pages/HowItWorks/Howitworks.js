@@ -36,7 +36,7 @@ const Howitworks = () => {
                     </div>
                 </div>
                 <div className="howitworks-bottom-image">
-                    <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1719218541/Cadillac_mjkcw9.png" alt="Cadillac 2024" />
+                    <img src="https://res.cloudinary.com/dqoibnakh/image/upload/v1719219481/Cadillac_Front_ykjemc.png" alt="Cadillac 2024" />
                 </div>
             </div>
         </div>
