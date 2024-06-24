@@ -48,10 +48,10 @@
     text-decoration: none;
 }
 
-/* Container for the form */
+/* Container for the form and social media logos */
 .form-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between; /* Ensure space between form and logos */
     width: 100%;
     max-width: 100%; /* Make the form container wider */
 }
@@ -63,6 +63,22 @@
     width: 50%; /* Set the form width to half of the container */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the social media container */
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 45%; /* Set the container width */
+}
+
+/* Styles for the social media logos */
+.social-media-logo {
+    width: 40px; /* Set the logo width */
+    height: auto;
+    margin-bottom: 1rem; /* Add space between logos */
 }
 
 /* Styles for each form group */
@@ -83,8 +99,7 @@
 /* Styles for form inputs and textarea */
 .form-group input,
 .form-group textarea {
-    width: 50%; /* Decrease the width of the form fields */
-    max-width: 80%; /* Ensure inputs don't overflow */
+    width: 100%; /* Ensure inputs don't overflow */
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -96,7 +111,7 @@
 .form-group input[type="email"],
 .form-group textarea {
     display: block;
-    width: 50%; /* Decrease the width of the form fields */
+    width: 100%; /* Decrease the width of the form fields */
     padding: 0.5rem;
     font-size: 1rem;
     color: #333;
@@ -107,7 +122,7 @@
 /* Styles for the submit button */
 .contact-button {
     display: inline-block; /* Ensure button spans full width */
-    width: 100%;
+    width: auto; /* Set width to auto for natural sizing */
     background-color: #40d4fc;
     color: #fff;
     padding: 0.75rem 1.5rem;
@@ -124,26 +139,8 @@
 }
 
 /* Responsive adjustments for tablets and larger screens */
-@media (min-width: 768px) {
-    .contact-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Align items to the center */
-    }
-
-    .contact-form {
-        width: 50%; /* Keep the form width to half */
-    }
-}
-
-/* Responsive adjustments for larger screens */
-@media (min-width: 1195px) {
-    .contact-section {
-        width: 1195px;
-        margin: 0 auto;
-    }
-
-    .contact-form {
-        width: 50%; /* Ensure form width adjusts to parent */
+@media (max-width: 768px) {
+    .social-media-container {
+        display: none; /* Hide the social media logos on smaller screens */
     }
 }
