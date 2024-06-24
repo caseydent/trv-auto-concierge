@@ -19,10 +19,10 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs.send(
-            'YOUR_SERVICE_ID',    // Replace with your EmailJS service ID
-            'YOUR_TEMPLATE_ID',   // Replace with your EmailJS template ID
+            'YOUR_SERVICE_ID',    // Replace with EmailJS service ID
+            'YOUR_TEMPLATE_ID',   // Replace with EmailJS template ID
             formData,             // Form data to be sent
-            'YOUR_USER_ID'        // Replace with your EmailJS user ID
+            'YOUR_USER_ID'        // Replace with EmailJS user ID
         )
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);
