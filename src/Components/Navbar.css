@@ -66,6 +66,7 @@
   justify-content: center; /* Centering the lines vertically */
   align-items: center; /* Centering the lines horizontally */
   transition: background-color 0.5s; /* Keep the transition duration the same */
+  z-index: 10; /* Added higher z-index */
 }
 
 .icon-burger .line {
@@ -78,6 +79,7 @@
 
 .icon-burger.active {
   background-color: #fff;
+  z-index: 10; /* Ensure it stays on top when active */
 }
 
 .icon-burger.active .line {
@@ -119,6 +121,7 @@
   margin: 0 auto; /* Center it horizontally */
   left: 0;
   right: 0;
+  z-index: 9; /* Added higher z-index */
 }
 
 .menu-container.show {
