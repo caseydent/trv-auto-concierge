@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Howitworks.css';
 
 const Howitworks = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
     return (
         <div className="howitworks-section">
             <div className="howitworks-content">
