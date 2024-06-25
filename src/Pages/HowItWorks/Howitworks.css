@@ -1,5 +1,6 @@
 .howitworks-section {
     padding: 5rem 1rem;
+    padding-bottom: 31rem; /* Add extra padding to the bottom */
     background-color: #f7f7f7;
     display: flex;
     justify-content: center;
