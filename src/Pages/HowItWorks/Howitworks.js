@@ -4,9 +4,10 @@ import './Howitworks.css';
 const Howitworks = () => {
 
     useEffect(() => {
+        // Scroll to the top when the component mounts
         window.scrollTo(0, 0);
       }, []);
-      
+
     return (
         <div className="howitworks-section">
             <div className="howitworks-content">
