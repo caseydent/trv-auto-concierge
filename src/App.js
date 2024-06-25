@@ -13,22 +13,21 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/trv-auto-concierge">
       <Fragment>
-      <div className="App">
-        <Navbar />
-        {/* Routing logic starts here */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/howitworks" element={<HowItWorks />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/aboutus" element={<Aboutus />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-
-        {/* Routing logic ends here */}
-      </div>
-      <Footer />
+        <div className="App">
+          <Navbar />
+          {/* Routing logic starts here */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/howitworks" element={<HowItWorks />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/aboutus" element={<Aboutus />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          {/* Routing logic ends here */}
+        </div>
+        <Footer />
       </Fragment>
     </Router>
   );
