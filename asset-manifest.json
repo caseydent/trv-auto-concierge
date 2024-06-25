@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/trv-auto-concierge/static/css/main.5ab7a83f.css",
-    "main.js": "/trv-auto-concierge/static/js/main.3c0af077.js",
+    "main.css": "/trv-auto-concierge/static/css/main.ea21e277.css",
+    "main.js": "/trv-auto-concierge/static/js/main.d8861353.js",
     "static/js/787.7ec3bdde.chunk.js": "/trv-auto-concierge/static/js/787.7ec3bdde.chunk.js",
     "index.html": "/trv-auto-concierge/index.html",
-    "main.5ab7a83f.css.map": "/trv-auto-concierge/static/css/main.5ab7a83f.css.map",
-    "main.3c0af077.js.map": "/trv-auto-concierge/static/js/main.3c0af077.js.map",
+    "main.ea21e277.css.map": "/trv-auto-concierge/static/css/main.ea21e277.css.map",
+    "main.d8861353.js.map": "/trv-auto-concierge/static/js/main.d8861353.js.map",
     "787.7ec3bdde.chunk.js.map": "/trv-auto-concierge/static/js/787.7ec3bdde.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ab7a83f.css",
-    "static/js/main.3c0af077.js"
+    "static/css/main.ea21e277.css",
+    "static/js/main.d8861353.js"
   ]
 }
