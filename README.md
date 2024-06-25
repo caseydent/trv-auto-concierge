@@ -1,3 +1,15 @@
+Project Notes:
+
+Contact Page
+
+The form is setup without the crednetials necessary for it to actually send messages, but there are
+placeholders in my code for the credentials to allow messages to be sent to info@trifecta.vc (which can be changed). 
+It's using the EmailJS-com service which can be changed accordingly also. Default links to each SoMe websites.
+
+How It Works, Services, About Us Pagea
+
+Text can be updated accordingly, to fit our narrative. Any images can be added and/or changed
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
