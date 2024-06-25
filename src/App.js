@@ -20,7 +20,7 @@ function App() {
           {/* Routing logic starts here */}
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/howitworks" element={<HowItWorks />} />
+            <Route path="/howitworks" element={<Howitworks />} />
             <Route path="/services" element={<Services />} />
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path="/contact" element={<Contact />} />
