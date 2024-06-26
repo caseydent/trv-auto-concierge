@@ -1,9 +1,12 @@
 .howitworks-section {
     padding: 5rem 1rem;
+    padding-bottom: 31rem; /* Add extra padding to the bottom */
     background-color: #f7f7f7;
     display: flex;
     justify-content: center;
     overflow: hidden; /* Ensure content does not overflow */
+    
+    
 }
 
 .howitworks-content {
@@ -106,9 +109,15 @@
     }
 }
 
+@media (min-width: 1100px) {
+    .howitworks-section{
+    margin-top: 7rem; /* Equal to the height of the navbar */
+    }
+}
+
 @media (min-width: 1195px) {
     .howitworks-section {
+        margin-top: 7rem; /* Equal to the height of the navbar */
         width: 1195px;
-        margin: 0 auto;
     }
 }

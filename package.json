@@ -16,6 +16,7 @@
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "react-transition-group": "^4.4.5",
     "react-waypoint": "^10.3.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
@@ -24,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +48,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
-  }
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.1.1"
+  },
+  "homepage": "https://caseydent.github.io/trv-auto-concierge"
 }
