@@ -65,9 +65,15 @@
     }
 }
 
+@media (min-width: 1100px) {
+    .aboutus-section{
+    margin-top: 7rem; /* Equal to the height of the navbar */
+    }
+}
+
 @media (min-width: 1195px) {
     .aboutus-section {
         width: 1195px;
-        margin: 0 auto;
+
     }
 }
