@@ -197,3 +197,9 @@
         align-self: center; /* Center align the button */
     }
 }
+
+@media (min-width: 1100px) {
+    .contact-section{
+    margin-top: 7rem; /* Equal to the height of the navbar */
+    }
+}
