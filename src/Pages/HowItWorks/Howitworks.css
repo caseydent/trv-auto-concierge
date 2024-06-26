@@ -117,7 +117,7 @@
 
 @media (min-width: 1195px) {
     .howitworks-section {
+        margin-top: 7rem; /* Equal to the height of the navbar */
         width: 1195px;
-        margin: 0 auto;
     }
 }
