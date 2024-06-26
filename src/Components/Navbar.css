@@ -217,12 +217,13 @@
     align-items: center; /* Override any other alignment */
   }
 
-  .navbar__heading h1{
+  .navbar__heading h1 {
     align-self: center;
     margin: 0.3125rem 0;
   }
 
-  .navbar__heading:first-child, .navbar__heading:last-child {
+  .navbar__heading:first-child,
+  .navbar__heading:last-child {
     align-self: center; /* Ensure both headings are centered */
   }
 
@@ -260,6 +261,13 @@
     margin-top: 2rem;
   }
 
+  .navbar--fixed {
+    position: fixed;
+    top: 0;
+    width: 1131px;
+    z-index: 1000; /* Ensure it stays on top */
+  }
+
   .icon-burger {
     display: none; /* Hide the hamburger menu icon */
   }
@@ -291,8 +299,3 @@
     text-underline-offset: 0.375rem; /* Gap between text and underline (6px/16px) */
   }
 }
-
-
-
-
-
