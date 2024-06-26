@@ -69,11 +69,9 @@
     }
 }
 
-@media (max-width: 768px) {
-    .services-title {
-        width: 100vw; /* Make sure the title spans the entire viewport width */
-        margin-left: calc(-50vw + 50%); /* Adjust to center the full-width title */
-        padding: 0 1rem;
+@media (min-width: 1100px) {
+    .services-section{
+    margin-top: 7rem; /* Equal to the height of the navbar */
     }
 }
 
