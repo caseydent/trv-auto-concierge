@@ -124,6 +124,14 @@
   z-index: 9; /* Added higher z-index */
 }
 
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
 .menu-container.show {
   display: block;
   opacity: 1;
@@ -235,7 +243,7 @@
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1100px) and (max-width: 1195px) {
   .navbar {
     display: flex;
     flex-direction: row; /* Horizontally align elements */
@@ -243,7 +251,7 @@
     justify-content: space-between; /* Space between content */
     height: auto; /* Allow navbar height to adjust to content */
     text-align: center; /* Ensure text aligns centrally */
-    border-bottom: none; /* Removes bottom border */
+    box-sizing: border-box; /* Include padding and border in width and height calculations */
   }
 
   .navbar__content {
@@ -264,8 +272,74 @@
   .navbar--fixed {
     position: fixed;
     top: 0;
-    width: 1131px;
+    width: 100%;
     z-index: 1000; /* Ensure it stays on top */
+  }
+
+  .icon-burger {
+    display: none; /* Hide the hamburger menu icon */
+  }
+
+  .menu-container {
+    display: flex; /* Ensure the container is visible */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: flex-end; /* Align items to the right */
+    margin-right: 0;
+    width: auto; /* Adjust width to content */
+    background-color: transparent; /* Or set to navbar background color */
+    position: static; /* Normal document flow */
+    opacity: 1; /* Fully visible */
+  }
+
+  .menu-item {
+    display: block; /* Display menu items */
+    margin: 0 0.9375rem; /* Spacing between items */
+    color: black; /* Text color */
+    text-decoration: none; /* No underline */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Cursor for clickable items */
+  }
+
+  .menu-item.active {
+    text-decoration: underline;
+    text-decoration-color: black; /* Specify the color of the underline */
+    text-decoration-thickness: 0.125rem; /* Thickness of the underline (2px/16px) */
+    text-underline-offset: 0.375rem; /* Gap between text and underline (6px/16px) */
+  }
+}
+
+@media (min-width: 1195px) {
+  .navbar {
+    display: flex;
+    flex-direction: row; /* Horizontally align elements */
+    align-items: center; /* Center all items horizontally */
+    justify-content: space-between; /* Space between content */
+    height: auto; /* Allow navbar height to adjust to content */
+    text-align: center; /* Ensure text aligns centrally */
+    box-sizing: border-box; /* Include padding and border in width and height calculations */
+  }
+
+  .navbar__content {
+    display: flex;
+    flex-direction: row; /* Horizontally align content */
+    align-items: center; /* Center the logo and headings container */
+    justify-content: flex-start; /* Align content to the start */
+    width: auto; /* Adjust width to content */
+  }
+
+  .navbar__headings {
+    margin-right: auto; /* Move headings to the left */
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .navbar--fixed {
+    position: fixed;
+    top: 0;
+    width: 1195px; /* Fixed width */
+    z-index: 1000; /* Ensure it stays on top */
+    margin: 0 auto; /* Center the fixed navbar horizontally */
   }
 
   .icon-burger {

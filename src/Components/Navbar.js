@@ -5,9 +5,12 @@ import './Navbar.css';
 const Navbar = () => {
     const [isMenuVisible, setMenuVisible] = useState(false);
     const [isNavbarFixed, setNavbarFixed] = useState(false);
+    const [hoveredItem, setHoveredItem] = useState(null);
+    const [isLargeViewport, setIsLargeViewport] = useState(window.innerWidth >= 1100);
 
     useEffect(() => {
         const handleResize = () => {
+            setIsLargeViewport(window.innerWidth >= 1100);
             if (window.innerWidth >= 768) {
                 setMenuVisible(false);
             } else {
@@ -55,11 +58,12 @@ const Navbar = () => {
                 <div className="line"></div>
             </div>
             <div className={`menu-container${isMenuVisible ? ' show' : ''}`}>
-                <NavLink to="/" exact className="menu-item" activeClassName="active" onClick={toggleMenu}>Home</NavLink>
-                <NavLink to="/howitworks" className="menu-item" activeClassName="active" onClick={toggleMenu}>How It Works</NavLink>
-                <NavLink to="/services" className="menu-item" activeClassName="active" onClick={toggleMenu}>Services</NavLink>
-                <NavLink to="/aboutus" className="menu-item" activeClassName="active" onClick={toggleMenu}>About Us</NavLink>
-                <NavLink to="/contact" className="menu-item" activeClassName="active" onClick={toggleMenu}>Contact</NavLink>
+                <NavLink to="/" exact className="menu-item" activeClassName="active" onMouseEnter={() => isLargeViewport && setHoveredItem('home')} onMouseLeave={() => isLargeViewport && setHoveredItem(null)}>Home</NavLink>
+                <NavLink to="/howitworks" className="menu-item" activeClassName="active" onMouseEnter={() => isLargeViewport && setHoveredItem('howitworks')} onMouseLeave={() => isLargeViewport && setHoveredItem(null)}>How It Works</NavLink>
+                <NavLink to="/services" className="menu-item" activeClassName="active" onMouseEnter={() => isLargeViewport && setHoveredItem('services')} onMouseLeave={() => isLargeViewport && setHoveredItem(null)}>Services</NavLink>
+                <NavLink to="/aboutus" className="menu-item" activeClassName="active" onMouseEnter={() => isLargeViewport && setHoveredItem('aboutus')} onMouseLeave={() => isLargeViewport && setHoveredItem(null)}>About Us</NavLink>
+                <NavLink to="/contact" className="menu-item" activeClassName="active" onMouseEnter={() => isLargeViewport && setHoveredItem('contact')} onMouseLeave={() => isLargeViewport && setHoveredItem(null)}>Contact</NavLink>
+                {isLargeViewport && <div className={`underline ${hoveredItem ? hoveredItem : 'active'}`}></div>}
             </div>
         </nav>
     );
